@@ -1,0 +1,85 @@
+/* ハンバーガーメニュー調整 */
+@media(min-width:900px){
+  /* メニューボタンを非表示にする */
+  button.drawer-toggle{
+    display: none;
+  }
+}
+/* 共通設定　940px以下で発動 */
+@media(max-width:940px){
+  header{
+    width:100%;
+  }
+  header h1{
+    margin-left:30px;
+  }
+  .section-box img,.section-box a,p.text{
+    clear: both;
+  }
+  .section-box{
+    margin-left:0;
+  }
+  p.img{
+    overflow: hidden;
+  }
+  div#top-preview{
+    clear: both;
+  }
+  #content{
+    min-height:500px;
+    padding-bottom:10px;
+  }
+  nav{
+    float:left;
+  }
+  nav ul li{
+    float:left;
+  }
+  section{
+    width:95%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  section img{
+    width: 100%;
+    height: auto;
+  }
+}
+/* ↑↑共通ここまで */
+
+
+/* 作品ページの画像サイズ調整 */
+@media(max-width:660px){
+  section{
+    width:100%;
+  }
+  #open_img img{
+    width: 100%;
+  }
+}
+@media(max-width:425px){
+  div#container{
+    padding:0;
+  }
+}
+@media(max-width:420px){
+  p.text,p.img{
+    width:80%;
+  }
+  div.big-illust p.img{
+    width:350px;
+    height:350px;
+  }
+  section{
+    margin:0;
+  }
+}
+@media(max-width:425px){
+  div#container{
+    padding:0;
+  }
+  section{
+   padding-left: 20px; 
+   padding-right: 20px; 
+  }
+}

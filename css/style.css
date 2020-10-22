@@ -1,0 +1,785 @@
+@charset "UTF-8";
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+body{
+  font-size:118%;
+  font-family: '游明朝', 'ヒラギノ明朝体 W3', serif;
+  color: #000000;
+  background-color: #ffffff;
+  width:100%;
+  height:100%;
+}
+.sp_top{
+  display: none;
+}
+@media(max-width:940px){
+  .sp_top{
+    display: inline;
+  }
+}
+#container{
+  background-image: url(../img/background.png);
+  background-position: top 50px right 0px;
+  background-repeat: no-repeat;
+}
+#index #container{
+  background-attachment: scroll;
+}
+@media(max-width:1000px){
+  #container{
+    background-position: top 50px right -150px;
+  }
+}
+*img{
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+/* SVGアニメーション */
+#open-page-logo{
+  width: 400px;
+  height: 50vh;
+  margin: 200px auto 0 auto;
+}
+@media(max-width:999px){
+  #open-page-logo{
+  width: 300px;
+  height: 300px;
+  margin-top: 100px;
+  }
+}
+path {
+  fill-opacity: 0;
+  transition: fill-opacity 1s;
+}
+
+.fill path.path_orange{
+fill: #f60;
+fill-opacity: 1;
+}
+
+.fill path.path_blue{
+fill: #66cccc;
+fill-opacity: 0.8;
+}
+
+.fill path.path_blue02{
+  fill: #09c;
+  fill-opacity: 1;
+}
+
+.fill path.path_green{
+fill: #99CC33;
+fill-opacity: 1;
+}
+
+.fill path{
+stroke:none;
+}
+/* SVGここまで */
+
+/* ↓↓基本レイアウト　ここから */
+div#container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 10px;
+  padding-top: 45px;
+}
+#index div#container{
+  max-width: 1100px;
+  height:80vh;
+}
+div#content{
+  width:100%;
+  overflow: hidden;
+  margin:0;
+  padding:0;
+}
+a,a:hover,a:active{
+  text-decoration: none;
+  color: #000000;
+}
+h1{
+  font-size: 250%;
+  margin-left: 10px;
+  margin-top: 30px;
+  padding-top:30px;
+}
+h2,h3,h4{
+  cursor: default;
+  margin-left: 10px;
+}
+h2{
+  font-size: 180%;
+  margin-bottom: 30px;
+}
+h3{
+  font-size: 150%;
+  margin-bottom: 20px;
+}
+h4{
+  font-size:110%;
+  margin-left:20px;
+  margin-bottom: 10px;
+}
+p{
+  margin:0 0 50px 10px;
+}
+nav{
+  margin:20px 0 20px 20px;
+}
+nav ul li{
+  display: block;
+  width:100px;
+  text-align: left;
+}
+footer{
+  font-size: 85%;
+  text-align: center;
+  line-height:30px;
+  pointer-events: none;
+  margin: 30px 0;
+}
+header{
+  max-width:275px;
+  float:left;
+}
+@media(min-width:900px){
+  header{
+    position: fixed;
+  }
+}
+#index header{
+  position: static;
+}
+section{
+  float: right;
+  width:70%;
+  margin:0 auto;
+  padding:25px;
+  padding-left: 35px;
+}
+nav ul{
+  width: 100%;
+}
+nav ul li{
+  width:100%;
+  padding:20px 0;
+  margin-left: 20px;
+}
+nav a{
+  display: block;
+  background: transparent;
+  width: 150px;
+  transition:all 1s ease-out;
+  padding-left: 10px;
+}
+nav ul li a:hover{
+  width: 80%;
+  color: #000;
+  background: #dadada;
+}
+nav ol li a:hover{
+  width:100%;
+}
+.nav-hide{
+  color: #7a7a7a;
+}
+footer{
+  clear: both;
+}
+p.text{
+  margin:0;
+  padding: 0;
+}
+p.img{
+  margin:0;
+  padding: 0;
+}
+
+/* ↓↓サイドメニュー　ここから */
+ol#side-menu{
+  width:80%;/* 線の長さ調整用 */
+  margin: 0;
+  margin-left: 10px;
+  padding: 2px 0 8px 5px;
+}
+ol#side-menu li{
+  width:100%;
+  margin: 0;
+  margin-left: 10px;
+  padding: 2px 0 8px 5px;
+}
+/* 「>」を先頭につける用 */
+.works_active{
+  padding-left: 5px;
+}
+.works_active::before{
+  content:">";
+  color: #09c;
+  margin-right: 5px;
+}
+.art_active{
+  padding-left: 5px;
+}
+.art_active::before{
+  content:">";
+  color: #f60;
+  margin-right: 5px;
+}
+/* サブメニュー用 */
+.menu-sub li:last-child{
+  border-bottom: 1px solid #fff;
+  margin-left: 0;
+}
+.menu-sub li a{
+  padding-left: 30px;
+  width: 90%;
+}
+.menu-sub li a::before{
+  content:"■";
+  font-size: 50%;
+  margin-right: 5px;
+}
+
+/* ↓シグネチャ */
+  /* 線を引く */
+.border_bt_blue{
+  width: 225px;
+  border-bottom: 1px solid #09c;
+  padding-bottom: 0;
+}
+.border_bt_orange{
+  width: 225px;
+  border-bottom: 1px solid #f60;
+  padding-bottom: 0;
+}
+#works-page a#works,#works-page a#works:hover,#art-page a#art,#art-page a#art:hover{
+  width:100%;
+  background-color: transparent;
+}
+#works-page a#works::after,#art-page a#art::after{
+  content:"";
+  width: 100%;
+  font-family: 'メイリオ';
+  margin-left:10px;
+  text-align: right;
+}
+#art-page a#art::after{
+  content:"―――――――――";
+  color: #f60;
+  margin-left:20px;
+  overflow: hidden;
+}
+#works-page a#works::after{
+  content:"――――――――";
+  color: #09c;
+  margin-left:15px;
+  overflow: hidden;
+}
+@media (max-width: 660px) {
+  .border_bt_blue{
+    width: 220px;
+  }
+  .border_bt_orange{
+    width: 220px;
+  }
+  #art-page a#art::after{
+    content:"――――――――";
+  }
+  #works-page a#works::after{
+    content:"―――――――";
+  }
+  .menu-sub li a {
+    padding-left: 0;
+    width: 90%;
+  }
+}
+/* ↑シグネチャ */
+/* ↑↑サイドメニュー　ここまで */
+
+/* ↑↑基本レイアウト　ここまで */
+
+/* ↓↓トップページ */
+#index div#content{
+  height:calc( 80vh - 100px );
+}
+div#top-preview{
+  background-position-x: left;
+}
+/* トップページdiv#preview用のjQueryで付与するクラス */
+.image-first{
+  background-image: url(../img/top.png);
+  background-repeat: no-repeat;
+}
+.image-profile{
+  background-image: url(../img/profile.png);
+  background-repeat: no-repeat;
+}
+.image-works{
+  background-image: url(../img/works.png);
+  background-repeat: no-repeat;
+}
+.image-art{
+  background-image: url(../img/art.png);
+  background-repeat: no-repeat;
+}
+.image-contact{
+  background-image: url(../img/contact.png);
+  background-repeat: no-repeat;
+}
+/* ↓トップページ　作品サムネイル用の.top_contentとdiv */
+.top_content{
+  float:right;
+  width:70%;
+}
+div#top-preview{
+  float:right;
+  margin-top:50px;
+  margin-right:300px;
+  width:400px;
+  height:400px;
+}
+/* ↑サムネここまで */
+/* 透過用に間に挟んでるやつ */
+#opacity{
+  width:100%;
+  height:100%;
+  background: rgba(255,255,255,0.1);
+}
+/* 挟みここまで */
+
+/* 調整用 */
+#index h1{
+  margin-top: 0;
+}
+/* ↑↑トップページ　ここまで */
+
+/* プロフィールページ */
+#profile-page section p{
+  padding-left:150px;
+  text-indent: -8em;
+}
+#profile-page dt{
+  margin:18px 0;
+}
+#profile-page dt::before{
+  content:"●"
+}
+#profile-page dd{
+  margin-left: 16px; /* 間の：を入れないのでその代わり */
+}
+#profile-page dl{
+  margin-top: 30px;
+}
+#profile-page dd{
+  margin-top: 5px;
+  word-break: break-all;
+  line-height: 35px;
+  padding:10px 0;
+}
+#profile-page .skill .dd-content{
+  min-height: 70px;
+  border-top:1px solid rgba(103, 157, 173, 0.5);
+  padding-top:20px;
+  padding-bottom:20px;
+  text-indent: -20px;
+  padding-left:20px;
+}
+dl.skill dd.dd-content:last-child{
+  border-bottom:1px solid rgba(103, 157, 173, 0.5);
+}
+#profile-page dl dd:first-of-type{
+  border:none;
+}
+.star-wrapper{
+  margin: 20px 0;
+}
+.dl-block{
+  margin:0px 30px 30px 30px;
+}
+.dd-span{
+  float:right;
+  margin-right: 20px;
+}
+/* ↓↓区切り線 */
+#profile-page div.dl-block::before{
+  content: "";
+  display: block;
+  border-top:1px solid rgba(0, 103, 144, 0.472);
+  margin-bottom: 30px;
+}
+#profile-page div.dl-block:last-of-type::after{
+  content: "";
+  display: block;
+  border-top:1px solid rgba(0, 103, 144, 0.472);
+  margin-bottom: 10px;
+}
+#profile-page div.dl-block:last-of-type::after{
+  content: "";
+  border:none;
+}
+@media(min-width:992px){
+  #profile-page .row{
+      margin-left:25px;
+  }
+}
+.skill-star{
+  margin-right: 25px;
+}
+@media(max-width:650px){
+  .skill-star{
+    float:left;
+    margin-bottom:10px;
+  }
+  span.skill-star:last-of-type{
+    margin-bottom:30px;
+  }
+}
+/* ↑↑区切り線 */
+/* ↑↑プロフィールページ */
+
+/* ↓↓作品ページ */
+img.img-thumbnail{
+  width: auto;
+  float: left;
+}
+p.img{
+  width: 100%;
+  margin-bottom:20px;
+}
+p.text{
+  width: 100%;
+  margin:0 0 10px 10px;
+  padding:10px;
+}
+p.text::after{
+  clear: both;
+}
+.section-box{
+  height:auto;
+  margin:0 0 40px 20px;
+  padding:0;
+}
+.section-box::after{
+  clear: both;
+}
+#art-page p.text{
+  clear: both;
+}
+
+/* 作品一覧ページのサムネイル */
+/* flexで並べる */
+.thumbnail_sort{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start
+}
+/* マウスオーバーしたときに出す背景部分の設定 */
+/* 画像とまったく同じサイズのdivで囲み、a:hoverで画像を半透明にする */
+/* すると、ページ上のような感じになる */
+.select_thumb{
+  border:1px solid #dcdcdc;
+  /* 全辺のborder分を足した幅と高さ */
+  width: 252px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  /* 縦横それぞれ2pxずつ */
+  border-radius: 10px;
+  text-align: center;
+  /* 色とフォント系 */
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  background: #a3a3a3;
+  /* 影 */
+  box-shadow:10px 10px 10px 0 rgba(200, 200, 200, 0.5);
+}
+/* 角をまるくする */
+.select_thumb img{
+  border-radius: 9px;
+}
+/* WEBとDTPのサムネイルをそれぞれ使い分け */
+.small_thumb{
+  height: 202px;
+  /* テキストを中央へ(高さはborder含めない) */
+  line-height: 200px;
+}
+.medium_thumb{
+  height: 356px;
+  /* テキストを中央へ(高さはborder含めない) */
+  line-height: 356px;
+}
+.big_thumb{
+  width:100%;
+  height: 502px;
+  /* テキストを中央へ(高さはborder含めない) */
+  line-height: 500px;
+}
+.small_thumb img{
+  transform:translateY(-200px);
+}
+.medium_thumb img{
+  transform:translateY(-356px);
+}
+/* マウスカーソルをあわせた際に画像を透明にして色をつける */
+div.thumbnail_sort a:hover{
+  opacity: 0.45;
+  transition: 0.5s;
+}
+
+/* 作品の個別ページ */
+.preview-box{
+  margin: 0 auto;
+}
+.preview-img{
+  margin: 0 auto 50px auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.preview-img img{
+  box-shadow: 5px 5px 30px 10px rgba(200, 200, 200, 0.5);
+  margin-top: 30px;
+  margin-right: 30px;
+}
+.preview-text{
+  max-width: 800px;
+}
+.preview-img a:hover{
+  opacity: 0.65;
+  transition: 0.5s;
+}
+/* ↑↑作品ページ */
+
+/* ↓↓絵葉書ページ */
+.postcard-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  text-align: center;
+}
+.postcard-box{
+  width: 300px;
+  height: 600px;
+  border:1px solid #dcdcdc;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 90%;
+}
+.postcard-box h3{
+  cursor: pointer;
+}
+.postcard-box a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.postcard-box a:hover{
+  background-color: #fcf3e4;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.postcard-box img{
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+.card-text{
+  padding: 10px;
+  box-sizing: border-box;
+}
+.bt_all{
+  margin: 30px;
+  text-align: center;
+}
+.bt_all a{
+  padding: 8px 20px;
+  border:2px solid #38a361;
+  font-family: "游ゴシック";
+  font-weight: bold;
+  color: #38a361;
+  border-radius: 10px;
+}
+.bt_all a:hover{
+  background: #38a361;
+  color: #fff;
+  transition: 0.3s;
+}
+/* ↑↑絵葉書ページ */
+
+/* ↓↓お問い合わせ */
+/* レイアウト */
+form p{
+  margin:20px 0;
+}
+#googleform{
+  clear: both;
+  width:100%;
+  height: 500px;
+}
+@media(min-width:576px){
+  #googleform{
+  margin-left: 20px;
+  }
+}
+input {
+  display: block;
+  width: 380px;
+  height:auto;
+  font-size: 80%;
+}
+textarea {
+  display: block;
+  width: 380px;
+  height: 120px;
+  font-size: 80%;
+}
+input#submitBtn{
+  width: 100px;
+  padding: 10px;
+}
+/* 送信後の表示 */
+#success, #error{
+  display: none;
+  font-size: 80%;
+}
+/* ↑↑お問い合わせ */
+
+/* レスポンシブ */
+@media(max-width:940px){
+  header,section{
+    clear: both;
+    width: 100%
+  }
+  div#container,header h1{
+    margin-top: 0;
+    padding-top: 0;
+  }
+  header h1{
+    display: none;
+  }
+  #index header h1{
+    display: block;
+  }
+  .top_content{
+    float:left;
+    width:auto;
+  }
+  .postcard-box{
+    display: block;
+    height: auto;
+  }
+  .postcard-box img{
+    max-width: 500px;
+    height: auto;
+  }
+  .card-text{
+    max-width: 500px;
+  }
+}
+/* header微調整 */
+@media(min-width:1100px){
+  header{
+    padding-left: 10px;
+  }
+}
+/* #top-previewの調整 */
+@media(max-width:1000px){
+  #index header h1{
+    margin-bottom:20px;
+  }
+  div#top-preview{
+  margin-right:200px;
+  }
+}
+@media(max-width:940px){
+  div#top-preview{
+  margin:0;/* reset */
+  margin-left:250px;
+  }
+}
+@media(max-width:849px){
+  div#top-preview{
+  margin-left:200px;
+  }
+}
+@media(max-width:799px){
+  div#top-preview{
+  margin-left:150px;
+  }
+}
+@media(max-width:699px){
+  div#top-preview{
+  margin-left:120px;
+  }
+}
+@media(max-width:599px){
+  div#top-preview{
+    margin-left: 80px;
+  }
+}
+@media(max-width:520px){
+  div#top-preview{
+    margin-left: 65px;
+  }
+}
+@media(max-width:499px){
+  div#top-preview{
+    margin-left: 40px;
+  }
+}
+@media(max-width:455px){
+  div#top-preview{
+    margin-left: 30px;
+  }
+}
+@media(max-width:440px){
+  div#top-preview{
+    margin-left: 10px;
+  }
+  .postcard-wrapper{
+    margin-left: 10px;
+  }
+}
+@media(max-width:410px){
+  div#top-preview{
+    margin-left: 0;
+  }
+  .postcard-wrapper{
+    margin-left: 0;
+  }
+}
+@media(max-width:399px){
+  div#top-preview{
+    width:300px;
+    height:300px;
+    background-size: 300px 300px;
+    margin-left: 10px;
+  }
+}
+
+
+/* どこでも使おう */
+.float-clear{
+  clear: both;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+.float-clear::after{
+  clear: both;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+.hide{
+  display: none;
+}
