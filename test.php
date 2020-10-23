@@ -7,8 +7,8 @@
 </head>
 <body>
 
-<form action="./test_mail_send.php">
-  <p>送り先</p><input type="text" name="to">
+<form action="./test_mail_send.php" method="post">
+  <p>送信先</p><input type="email" name="to">
   <p>件名</p><input type="text" name="title">
   <p>メッセージ</p><textarea name="message" cols="30" rows="10"></textarea>
   <p><input type="submit" name="send" value="送信"></p>
