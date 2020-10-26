@@ -14,14 +14,15 @@
           <a id="profile" href="profile.html">Profile</a>
       </li>
       <li>
-          <a id="works" href="works.html">Works</a>
-          <div id="side-menu">
-            <span><a href="works.html#web-top">WEB</a></span>
+          <div class="open_menu">Works</div>
+          <div class="side-menu">
+            <a href="works.html">作品一覧</a>
+            <a href="works.html#web-top">WEB</a>
             <!-- <div class="menu-sub">
               <span><a href="oyasai.html">おやさい.net</a></span>
               <span><a href="cafe-cookies.html">Cafe*Cookies</a></span>
             </div> -->
-            <span><a href="works.html#dtp-top">DTP</a></span>
+            <a href="works.html#dtp-top">DTP</a>
             <!-- <div class="menu-sub">
               <span><a href="kumayoke.html">チラシ</a></span>
               <span><a href="work_postcard.html">ハガキ</a></span>
@@ -29,10 +30,11 @@
           </div>
       </li>
       <li>
-          <a id="art" href="art.html">Art</a>
-          <div id="side-menu">
-            <span><a href="ocean.html">イラスト</a></span>
-            <span><a href="art_postcard.html">絵はがき</a></span>
+          <div class="open_menu">Art</div>
+          <div class="side-menu">
+            <a href="art.html">作品一覧</a>
+            <a href="ocean.html">イラスト</a>
+            <a href="art_postcard.html">絵はがき</a>
           </div>
       </li>
       <li>
