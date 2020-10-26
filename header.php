@@ -14,7 +14,7 @@
           <a id="profile" href="profile.html">Profile</a>
       </li>
       <li>
-          <div class="open_menu">Works</div>
+          <div id="works" class="open_menu">Works</div>
           <div class="side-menu">
             <a href="works.html">作品一覧</a>
             <a href="works.html#web-top">WEB</a>
@@ -30,7 +30,7 @@
           </div>
       </li>
       <li>
-          <div class="open_menu">Art</div>
+          <div id="art" class="open_menu">Art</div>
           <div class="side-menu">
             <a href="art.html">作品一覧</a>
             <a href="ocean.html">イラスト</a>
