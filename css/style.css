@@ -201,13 +201,13 @@ p.img{
 }
 
 /* ↓↓サイドメニュー　ここから */
-ol#side-menu{
+#side-menu{
   width:80%;/* 線の長さ調整用 */
   margin: 0;
   margin-left: 10px;
   padding: 2px 0 8px 5px;
 }
-ol#side-menu li{
+#side-menu li{
   width:100%;
   margin: 0;
   margin-left: 10px;
