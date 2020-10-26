@@ -29,7 +29,7 @@ $(function () {
     //  ------------- Profile -------------
 
     //マウスを乗せたら発動
-    $('a#profile').mouseover(function () {
+    $('header #profile').mouseover(function () {
 
         //フェードイン処理＋クラス付与して背景が変わる。
         $('div#top-preview').fadeIn(400).addClass('image-profile');
@@ -38,7 +38,7 @@ $(function () {
     //  ------------- Works -------------
 
     //マウスを乗せたら発動
-    $('a#works').mouseover(function () {
+    $('header #works').mouseover(function () {
 
         //フェードイン処理＋クラス付与して背景が変わる
         $('div#top-preview').fadeIn(400).addClass('image-works');
@@ -47,7 +47,7 @@ $(function () {
     //  ------------- Art -------------
 
     //マウスを乗せたら発動
-    $('a#art').mouseover(function () {
+    $('header #art').mouseover(function () {
 
         //フェードイン処理＋クラス付与して背景が変わる
         $('div#top-preview').fadeIn(400).addClass('image-art');
@@ -56,7 +56,7 @@ $(function () {
     //  ------------- Contact -------------
 
     //マウスを乗せたら発動
-    $('a#contact').mouseover(function () {
+    $('header #contact').mouseover(function () {
 
         //フェードイン処理＋クラス付与して背景が変わる
         $('div#top-preview').fadeIn(400).addClass('image-contact');
