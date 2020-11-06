@@ -85,10 +85,10 @@ test;
 
 <?php 
   //定数
-  define('tax', 0.08);
+  define('TAX_PARCENT', 0.10);
   $price = 100;
   
-  echo '値段は' , $price + ($price * tax) , '円です。';
+  echo '値段は' , $price + ($price * TAX_PARCENT) , '円です。';
 ?>
 
 </body>
