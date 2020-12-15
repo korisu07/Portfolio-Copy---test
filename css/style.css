@@ -803,3 +803,6 @@ input#submitBtn{
 .hide{
   display: none;
 }
+.blue-text, .blue-text a{
+  color: rgb(0, 92, 122);
+}
