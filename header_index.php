@@ -9,18 +9,18 @@
 
   <nav>
     <ul>
-      <li class="sp_top"><a href="index.html">Y.K.Portfolio</a></li>
+      <li class="sp_top"><a href="index.php">Y.K.Portfolio</a></li>
       <li>
-          <a id="profile" href="profile.html">Profile</a>
+          <a id="profile" href="profile.php">Profile</a>
       </li>
       <li>
-          <a id="works" href="works.html">Works</a>
+          <a id="works" href="works.php">Works</a>
       </li>
       <li>
-          <a id="art" href="art.html">Art</a>
+          <a id="art" href="art.php">Art</a>
       </li>
       <li>
-          <a id="contact" href="contact.html">Contact</a>
+          <a id="contact" href="contact.php">Contact</a>
       </li>
     </ul>
 </nav>
