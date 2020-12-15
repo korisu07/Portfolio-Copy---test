@@ -9,7 +9,7 @@
 
     <div id="content">
 
-    <?php include 'header.php'; ?>
+    <?php include 'header_index.php'; ?>
 
       <div class="top_content">
           <div id="top-preview" class="image-first">
