@@ -1,5 +1,5 @@
 <header>
-  <h1><a href="index.html">Y.K.Portfolio</a></h1>
+  <h1><a href="index.php">Y.K.Portfolio</a></h1>
 
   <!-- ハンバーガーメニューのボタン用 -->
   <input id="menu" type="checkbox">
@@ -9,36 +9,36 @@
 
   <nav>
     <ul>
-      <li class="sp_top"><a href="index.html">Y.K.Portfolio</a></li>
+      <li class="sp_top"><a href="index.php">Y.K.Portfolio</a></li>
       <li>
-          <a id="profile" href="profile.html">Profile</a>
+          <a id="profile" href="profile.php">Profile</a>
       </li>
       <li>
           <div id="works" class="open_menu">Works</div>
           <div class="side-menu">
-            <a href="works.html">作品一覧</a>
-            <a href="works.html#web-top">WEB</a>
-            <!-- <div class="menu-sub">
-              <span><a href="oyasai.html">おやさい.net</a></span>
-              <span><a href="cafe-cookies.html">Cafe*Cookies</a></span>
-            </div> -->
-            <a href="works.html#dtp-top">DTP</a>
-            <!-- <div class="menu-sub">
-              <span><a href="kumayoke.html">チラシ</a></span>
-              <span><a href="work_postcard.html">ハガキ</a></span>
-            </div> -->
+            <a href="works.php">作品一覧</a>
+            <a href="#">WEB</a>
+            <div class="menu-sub">
+              <span><a href="oyasai.php">おやさい.net</a></span>
+              <span><a href="cafe-cookies.php">Cafe*Cookies</a></span>
+            </div>
+            <a href="#">DTP</a>
+            <div class="menu-sub">
+              <span><a href="kumayoke.php">チラシ</a></span>
+              <span><a href="work_postcard.php">ハガキ</a></span>
+            </div>
           </div>
       </li>
       <li>
           <div id="art" class="open_menu">Art</div>
           <div class="side-menu">
-            <a href="art.html">作品一覧</a>
-            <a href="ocean.html">イラスト</a>
-            <a href="art_postcard.html">絵はがき</a>
+            <a href="art.php">作品一覧</a>
+            <a href="ocean.php">イラスト</a>
+            <a href="art_postcard.php">絵はがき</a>
           </div>
       </li>
       <li>
-          <a id="contact" href="contact.html">Contact</a>
+          <a id="contact" href="contact.php">Contact</a>
       </li>
     </ul>
 </nav>
