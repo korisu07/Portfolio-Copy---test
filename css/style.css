@@ -221,7 +221,6 @@ p.img{
 .open_menu::before{
   content: '▼';
   font-size: 12px;
-  color: #09c;
   width: 12px;
   display: inline-block;
   margin-top: 0;
@@ -232,6 +231,31 @@ p.img{
   margin-top: 10px;
   margin-left: 10px;
   border-left: 5px solid #09c;
+}
+#works.open_menu::before{
+  color: #09c;
+}
+#art.open_menu::before{
+  color: #f60;
+}
+#art + .side-menu a{
+  border-left-color: #f60;
+}
+.menu-sub a{
+  border-left: none;
+
+}
+.menu-sub a::before{
+  content: '>';
+  font-size: 75%;
+  line-height: 30px;
+  padding-right: 5px;
+}
+#works + .side-menu .menu-sub a::before{
+  color: #09c;
+}
+#art + .side-menu .menu-sub a::before{
+  color:#f60;
 }
 /* 「>」を先頭につける用 */
 .works_active{
