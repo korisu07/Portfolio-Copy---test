@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<?php include 'head.php'; ?>
+<?php include './inc/head.php'; ?>
 
 <body id="index">
 
@@ -9,17 +9,14 @@
 
     <div id="content">
 
-    <?php include 'header_index.php'; ?>
+    <?php include './inc/header_index.php'; ?>
 
-      <div class="top_content">
-          <div id="top-preview" class="image-first">
-              <div id="opacity"></div> <!-- opacity 透過用 -->
-          </div> <!-- top-preview -->
-      </div>
+      <div id="top-preview" class="image-first">
+      </div> <!-- top-preview -->
 
     </div> <!-- content -->
 
-  <?php include 'footer.php'; ?>
+  <?php include './inc/footer.php'; ?>
 
   </div> <!-- container -->
 
