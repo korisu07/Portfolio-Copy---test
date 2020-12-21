@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<?php include 'head.php'; ?>
+<?php include './inc/head.php'; ?>
 
 <body id="profile-page">
 
@@ -9,7 +9,7 @@
 
   <div id="content">
 
-  <?php include 'header.php'; ?>
+  <?php include './inc/header.php'; ?>
       
     <section>
       <h2>Profile</h2>
@@ -76,7 +76,7 @@
 
     </div> <!-- content -->
 
-    <?php include 'footer.php'; ?>
+    <?php include './inc/footer.php'; ?>
     
 </div> <!-- container -->
 
