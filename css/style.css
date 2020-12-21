@@ -29,6 +29,7 @@ body{
   background-attachment: scroll;
 }
 @media(max-width:1000px){
+  /* 全体の背景を調整 */
   #container{
     background-position: top 50px right -150px;
   }
@@ -36,50 +37,7 @@ body{
 *img{
   width: 100%;
   height: auto;
-  vertical-align: bottom;
 }
-/* SVGアニメーション */
-#open-page-logo{
-  width: 400px;
-  height: 50vh;
-  margin: 200px auto 0 auto;
-}
-@media(max-width:999px){
-  #open-page-logo{
-  width: 300px;
-  height: 300px;
-  margin-top: 100px;
-  }
-}
-path {
-  fill-opacity: 0;
-  transition: fill-opacity 1s;
-}
-
-.fill path.path_orange{
-fill: #f60;
-fill-opacity: 1;
-}
-
-.fill path.path_blue{
-fill: #66cccc;
-fill-opacity: 0.8;
-}
-
-.fill path.path_blue02{
-  fill: #09c;
-  fill-opacity: 1;
-}
-
-.fill path.path_green{
-fill: #99CC33;
-fill-opacity: 1;
-}
-
-.fill path{
-stroke:none;
-}
-/* SVGここまで */
 
 /* ↓↓基本レイアウト　ここから */
 div#container{
@@ -126,7 +84,7 @@ h4{
   margin-bottom: 10px;
 }
 p{
-  margin:0 0 50px 10px;
+  margin:0;
 }
 nav{
   margin:20px 0 20px 20px;
@@ -146,14 +104,6 @@ footer{
 header{
   max-width:275px;
   float:left;
-}
-@media(min-width:900px){
-  header{
-    position: fixed;
-  }
-}
-#index header{
-  position: static;
 }
 section{
   float: right;
@@ -380,22 +330,15 @@ div#top-preview{
   float:right;
   width:70%;
 }
-div#top-preview{
+#top-preview{
   float:right;
   margin-top:50px;
   margin-right:300px;
   width:400px;
   height:400px;
+  opacity: 0.85;
 }
 /* ↑サムネここまで */
-/* 透過用に間に挟んでるやつ */
-#opacity{
-  width:100%;
-  height:100%;
-  background: rgba(255,255,255,0.1);
-}
-/* 挟みここまで */
-
 /* 調整用 */
 #index h1{
   margin-top: 0;
@@ -473,15 +416,7 @@ dl.skill dd.dd-content:last-child{
 }
 .skill-star{
   margin-right: 25px;
-}
-@media(max-width:650px){
-  .skill-star{
-    float:left;
-    margin-bottom:10px;
-  }
-  span.skill-star:last-of-type{
-    margin-bottom:30px;
-  }
+  margin-bottom: 10px;
 }
 /* ↑↑区切り線 */
 /* ↑↑プロフィールページ */
@@ -697,116 +632,16 @@ input#submitBtn{
 }
 /* ↑↑お問い合わせ */
 
-/* レスポンシブ */
-@media(max-width:940px){
-  header,section{
-    clear: both;
-    width: 100%
-  }
-  div#container,header h1{
-    margin-top: 0;
-    padding-top: 0;
-  }
-  header h1{
-    display: none;
-  }
-  #index header h1{
-    display: block;
-  }
-  .top_content{
-    float:left;
-    width:auto;
-  }
-  .postcard-box{
-    display: block;
-    height: auto;
-  }
-  .postcard-box img{
-    max-width: 500px;
-    height: auto;
-  }
-  .card-text{
-    max-width: 500px;
-  }
-}
-/* header微調整 */
-@media(min-width:1100px){
-  header{
-    padding-left: 10px;
-  }
-}
+
 /* #top-previewの調整 */
-@media(max-width:1000px){
+@media(max-width:960px){
   #index header h1{
     margin-bottom:20px;
   }
-  div#top-preview{
-  margin-right:200px;
-  }
-}
-@media(max-width:940px){
-  div#top-preview{
-  margin:0;/* reset */
-  margin-left:250px;
-  }
-}
-@media(max-width:849px){
-  div#top-preview{
-  margin-left:200px;
-  }
-}
-@media(max-width:799px){
-  div#top-preview{
-  margin-left:150px;
-  }
-}
-@media(max-width:699px){
-  div#top-preview{
-  margin-left:120px;
-  }
-}
-@media(max-width:599px){
-  div#top-preview{
-    margin-left: 80px;
-  }
-}
-@media(max-width:520px){
-  div#top-preview{
-    margin-left: 65px;
-  }
-}
-@media(max-width:499px){
-  div#top-preview{
-    margin-left: 40px;
-  }
-}
-@media(max-width:455px){
-  div#top-preview{
-    margin-left: 30px;
-  }
-}
-@media(max-width:440px){
-  div#top-preview{
-    margin-left: 10px;
-  }
-  .postcard-wrapper{
-    margin-left: 10px;
-  }
-}
-@media(max-width:410px){
-  div#top-preview{
-    margin-left: 0;
-  }
-  .postcard-wrapper{
-    margin-left: 0;
-  }
-}
-@media(max-width:399px){
-  div#top-preview{
-    width:300px;
-    height:300px;
-    background-size: 300px 300px;
-    margin-left: 10px;
+  #top-preview{
+    margin: 0 calc( (100vw - 400px) / 2 );
+    margin-top: 50px;
+    margin-left:250px;
   }
 }
 
