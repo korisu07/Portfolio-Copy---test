@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <?php include './inc/head.php'; ?>
+
+  <head>
+
+    <?php include './inc/head.php'; ?>
+
+  </head>
+
 <body id="works-page">
 
 <div id="container">

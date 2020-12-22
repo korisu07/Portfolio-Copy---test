@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
+  
+  <head>
 
-<?php include './inc/head.php'; ?>
+    <?php include './inc/head.php'; ?>
+
+  </head>
 
 <body id="works-page" class="drawer drawer--right">
 

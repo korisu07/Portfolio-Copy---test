@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-  <?php include './inc/head.php'; ?>
+  <head>
+
+    <?php include './inc/head.php'; ?>
+    <link href="css/modal_img.css" rel="stylesheet">
+
+  </head>
 
 <body id="works-page">
 
