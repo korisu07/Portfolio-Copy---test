@@ -12,12 +12,18 @@ body{
   width:100%;
   height:100%;
 }
+h1,h2,h3,h4,h5{
+  font-weight: normal;
+}
+ul, ol{
+  list-style-type: none;
+}
 .sp_top{
   display: none;
 }
-@media(max-width:940px){
+@media(max-width:960px){
   .sp_top{
-    display: inline;
+    display: block;
   }
 }
 #container{
