@@ -1,0 +1,49 @@
+
+/* ↓↓ここから シェアボタンの設定 */
+@media(max-width:400px){
+    .share{
+        clear: left;
+        width:100%;
+    }
+}
+    /* シェアボタンの設定 */
+    .share-box{
+        width: auto;
+    }
+    .share {
+        width: 50%;
+        float: left;
+        line-height: 60px;
+    }
+    i.fa-facebook-square:after{
+        font-family: '游明朝', 'ヒラギノ明朝体 W3', serif;
+        content: "Facebookでシェア";
+        margin-left: 8px;
+        font-weight: bold;
+    }
+    i.fa-twitter-square:after{
+        font-family: '游明朝', 'ヒラギノ明朝体 W3', serif;
+        content: "Twitterでシェア";
+        margin-left: 8px;
+        font-weight: bold;
+    }
+    @media(min-width:991px){
+        .cp_offcm .cp_menu .share{
+            width: auto;
+            padding: 0 20px;
+        }
+        .share i:after{
+            content: "";
+            margin: 0;
+            padding: 0;
+        }
+        .share-box{
+            width: auto;
+            margin-left: 20px;
+        }
+        a.share-title{
+            display: block;
+            text-align: center;
+        }
+    }
+/* ↑↑ここまで シェアボタンの設定 */

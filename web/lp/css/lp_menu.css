@@ -1,0 +1,132 @@
+header{
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  color: rgb(230, 218, 204);
+  background-color: rgb(43, 43, 43);
+  padding: 0 15px;
+}
+header img{
+  width: 100%;
+  height: auto;
+}
+header h1{
+  flex: 1;
+  font-size: 135%;
+  margin: auto 0;
+}
+header nav{
+  position: fixed;
+  z-index: 99;
+  width: 60%;
+  height: 120vh;
+  background-color: rgb(43, 43, 43);
+  right: -60%;
+  margin: auto 0;
+  transition: all 0.25s;
+}
+header a{
+  display: block;
+  color: rgb(230, 218, 204);
+}
+header nav ul{
+  width: 100%;
+  text-align: center;
+}
+header ul li a{
+  margin-bottom: 20px;
+  border-bottom:1px solid  rgb(146, 119, 87);
+  line-height: 50px;
+  padding: 20px;
+  transition: background-color 0.1s, border 0.1s;
+}
+header nav ul li a:hover, header nav ul li a:active{
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom:1px solid rgb(233, 186, 133);
+}
+header nav ul li a:last-child{
+  margin-bottom: 0;
+}
+input[type="checkbox"]#menu{
+  display: none;
+  left: -50vw;
+}
+
+.menu_open{
+  width: 50px;
+  margin: auto 0;
+}
+.menu_close{
+  display: block;
+  z-index: 99;
+  position: fixed;
+  width: 50px;
+  top: 0;
+  right: -100px;
+  margin-top: 20px;
+  margin-right: 20px;
+  transition: all 0.25s;
+}
+.menu_back{
+  display: none;
+  z-index: 50;
+  width: 100%;
+  height: 120%;
+  transition: all 0.25s;
+}
+input[type="checkbox"]#menu:checked ~ nav {
+  right: 0;
+}
+
+input[type="checkbox"]#menu:checked ~ .menu_close {
+  right: 60%;
+}
+
+input[type="checkbox"]#menu:checked ~ .menu_back {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3)!important;
+}
+@media(min-width: 861px){
+  header input, header label{
+    display: none;
+  }
+  header h1{
+    width: 40%;
+  }
+  header nav{
+    z-index: 1;
+    display: block;
+    position: static;
+    width: 60%;
+    height: 80px;
+    line-height: 40px;
+    transition: all 0s;
+  }
+  header ul{
+    display: flex;
+    flex-wrap: wrap;
+    height: 80px;
+  }
+  header ul li{
+    flex: 3;
+    margin: 20px 0;
+    margin-right: 15px;
+  }
+  header ul li a{
+    line-height: 40px;
+    padding: 0;
+  }
+}
+form{
+  width: 50%;
+  margin: 0 auto;
+}
+form input[type="text"]{
+  width: 80%;
+  height: 30px;
+  font-size: 1rem;
+}

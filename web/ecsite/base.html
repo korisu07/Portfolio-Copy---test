@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+<title>おやさい.net ｜ 野菜のネットショップ</title>
+
+<link rel="stylesheet" href="css/cssreset-min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-sub.css">
+
+<link rel="stylesheet" href="slick/slick.css">
+<link rel="stylesheet" href="slick/slick-theme.css">
+
+</head>
+<body>
+<header>
+    
+    <div class="header-top">
+
+    <div id="container">
+        <h1><a href="index.html">おやさい.net</a></h1>
+
+        <ol>
+            <li class="anshin">
+                <i class="fa fa-heart" aria-hidden="true"></i>安心・安全な商品をお届けします。
+            </li>        
+            <div class="small-menu">
+                <li class="kounyu"><a href="#"><i class="fa fa-repeat" aria-hidden="true"></i>購入履歴</a></li>
+                <li class="mypage"><a href="#"><i class="fa fa-user" aria-hidden="true"></i>マイページ</a></li>
+            </div>
+        </ol>
+    </div> <!-- container -->
+
+        <div class="header-inside"></div>
+    </div> <!-- header-top -->
+
+    <div class="nav-bar">
+        <div id="container">
+            <nav>
+                <ul>
+                    <li><a href="#">産地から探す</li>
+                    <li><a href="#">商品一覧</a></li>
+                    <li><a href="#">今が旬！特集</a></li>
+                    <li class="nav-search">
+                    <form action="#" method="post">
+                        <input type="search" placeholder="ワードで探す">
+                        <button class="search-button" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                        </form>
+                    </li>
+                    <li><a href="#">カゴを見る</a></li>
+                </ul>
+            </nav>
+        </div> <!-- container -->
+    </div> <!-- nav-bar -->
+
+</header>
+
+<div id="container">
+    <aside>
+        <ul>
+            <li>一覧</li>
+            <li><a href="#">野菜</a></li>
+            <li><a href="#">果物</a></li>
+            <li><a href="#">穀物</a></li>
+            <li><a href="#">旬のギフト</a></li>
+            <li><a href="#">すべての商品</a></li>
+        </ul>
+    </aside>
+
+    <article>
+        <div class="top-slider">
+            <ul class="slider">
+                <li><img src="img/top-yasai.jpg" alt="なす"></li>
+                <li><img src="img/top-nasu.jpg" alt="トマト"></li>
+            </ul> 
+        </div> <!-- top-img -->
+    </article>
+</div> <!-- container -->
+<footer>
+    <div id="container">
+        <p>カテゴリから探す</p>
+    </div>
+</footer>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script src="slick/slick.min.js"></script>
+
+<script>
+    $('.slider').slick({
+        autoplay:true,      //自動再生
+        autoplaySpeed:4000, //自動再生の速度
+        dots:true,          //ドットのナビゲーションを表示
+        fade:true, //フェードする設定に変更
+        speed:2000, //フェードアニメーションの速度
+        waitForAnimate:false, //ボタンを押したら強制で切り替わる
+        arrows:false, //左右のボタンを消した
+    });
+</script>
+
+</body>
+</html>

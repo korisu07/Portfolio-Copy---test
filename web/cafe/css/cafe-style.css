@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/* モバイルの設定から */
+/* ↓↓ここから　基本のレイアウト */
+body{
+    width:100%;
+    font-size: 100%;
+	font-family: '游明朝', 'ヒラギノ明朝体 W3', serif;
+    color: rgb(90,60,25);
+    background-color: #fff9e7;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+#container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+img{
+    width:100%;
+    height: auto;
+    background-color: #fff9e7;
+}
+header{
+    background-color: rgba(255, 249, 231, 0.8);
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+header a img{
+    background-color: transparent;
+}
+img.header{
+    margin-bottom:10px;
+}
+header h1{
+    font-size: 160%;
+    line-height: 100px;
+    margin-left: 20px;
+}
+article{
+    min-height: 1000px;
+}
+footer{
+    text-align: center;
+    height: 50px;
+    font-size: 90%;
+    line-height: 50px;
+    background-color: #fff9e7;
+    color: rgb(126, 112, 95);
+}
+    /* ↓↓PC用レイアウト */
+@media(min-width:976px){
+    header h1{
+        font-size: 220%;
+        line-height: 100px;
+        margin-left: 20px;
+        margin-right: 10px;
+        padding: 0;
+    }
+    article p{
+        padding:0;
+    }
+}
+@media (min-width: 1100px){
+    header h1 {
+        margin-right: 30px;
+    }
+}
+    /* ↑↑PC用レイアウト */
+
+    /* ↓↓ここから　リンク関連 */
+a{
+    text-decoration: none;
+    color: rgb(90,60,25);
+}
+    /* ↑↑ここまで リンク関連*/
+
+
+/* ↓↓ここから　メニューバー */
+header{
+    overflow: hidden;
+}
+header h1{
+    float: left;
+}
+nav ul{
+    display: block;
+    font-size: 110%;
+}
+nav ul li a, li .share-box:before {
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+    width: 125px;
+    margin: 35px 5px 10px 5px;
+    padding: 0;
+    border-bottom: 5px solid transparent;
+}
+nav ul li a:hover{
+    border-bottom: 5px solid rgba(212, 143, 64, 0.5);
+}
+article{
+    clear: both;
+}
+/* ↑↑ここまで　メニューバー */
+
+/* ↑↑ここまで　基本のレイアウト */
+
+
+/* ↓↓ここから　トップページ */
+h2.new{
+    border-bottom: 1px dotted #ffffff;
+}
+ol.new li{
+    border-bottom: 1px dotted #ffffff;
+}
+.new{
+    margin: auto;
+    background-color: rgba(133, 71, 0, 0.4);
+    color:#ffffff;
+    max-width:380px;
+}
+ol.new time{
+    margin-right: 10px;
+}
+ol.new li{
+    padding-left:130px;
+    text-indent:-7.3em;
+    }
+@media(min-width:520px){
+    h2.new{
+        text-indent:15px;
+    }
+    .new{
+        margin-left: 50px;
+        max-width:450px;
+    }
+    ol.new time{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+ol.new li:last-child{
+    border: none;
+}
+/* ↑↑ここまで　トップページ */

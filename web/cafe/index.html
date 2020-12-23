@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/cssreset-min.css">
+
+<link rel="stylesheet" href="css/cafe-style.css">
+<link rel="stylesheet" href="css/hamburger-menu.css">
+<link rel="stylesheet" href="css/cafe-style-sub.css">
+
+<title>Cafe*Cookies</title>
+</head>
+<body id="#top-page">
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<header>
+    
+    <div id="container">
+
+        <div class="cp_cont">
+            <div class="cp_contents">
+                <h1><a href="#">Cafe*Cookies</a></h1>
+            </div>
+            <div class="cp_offcm">
+                <input type="checkbox" id="cp_toggle">
+                <label for="cp_toggle"><span></span></label>
+
+                <div class="cp_menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">店舗情報</a></li>
+                        <li><a href="#">今月のイチオシ</a></li>
+                        <li><a href="#">メニュー</a></li>
+                        <li><a href="#">アクセス</a></li>
+                        <li>
+                        <span class="share-box">
+                            <!-- <a href="#" class="share share-title" >シェアする</a> -->
+                            
+                            <a class="share" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2F&amp;src=sdkpreparse" data-lang="ja"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                            
+                            <a class="share" href="https://twitter.com/intent/tweet?text=Cafe*Cookies%20-%20クッキーと紅茶のお店　http~(damy link)" data-lang="ja"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                        </span>
+                        </li>
+                    </ul>
+                </nav>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+<div id="container">
+        <article>
+            <img class="header" alt="cookies" src="img/cookies.jpg">
+            <h2 class="new">★最新情報★</h2>
+            <ol class="new">
+                <li><time datetime="08-14">8月20日</time>新メニューを追加しました。</li>
+                <li><time datetime="08-01">8月01日</time>今月のイチオシ情報！</li>
+                <li><time datetime="07-10">7月10日</time>夏の限定メニューのお知らせ</li>
+            </ol>
+        </article>
+        <footer>
+            Cafe*Cookies.
+        </footer>
+</div>
+</div> <!-- output -->
+
+    <!-- Twitter -->
+    <script>
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        
+            t._e = [];
+            t.ready = function(f) {
+            t._e.push(f);
+        };
+      
+        return t;
+      }(document, "script", "twitter-wjs"));
+    </script>
+
+  <!-- Load Facebook SDK for JavaScript -->
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v4.0"></script>
+
+</body>
+</html>
