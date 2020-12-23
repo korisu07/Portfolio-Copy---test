@@ -31,9 +31,6 @@ ul, ol{
   background-position: top 50px right 0px;
   background-repeat: no-repeat;
 }
-#index #container{
-  background-attachment: scroll;
-}
 @media(max-width:1000px){
   /* 全体の背景を調整 */
   #container{
@@ -52,15 +49,9 @@ div#container{
   padding:0 10px;
   padding-top: 45px;
 }
-#index div#container{
-  max-width: 1100px;
-  height:80vh;
-}
 div#content{
   width:100%;
   overflow: hidden;
-  margin:0;
-  padding:0;
 }
 a,a:hover,a:active{
   text-decoration: none;
@@ -141,28 +132,17 @@ nav ul li a:hover{
 nav ol li a:hover{
   width:100%;
 }
-.nav-hide{
-  color: #7a7a7a;
-}
 footer{
   clear: both;
-}
-p.text{
-  margin:0;
-  padding: 0;
-}
-p.img{
-  margin:0;
-  padding: 0;
 }
 
 /* ↓↓サイドメニュー　ここから */
 /* 開くメニュー */
-.open_menu{
+.nav-menu{
   cursor: pointer;
   padding-left: 10px;
 }
-.open_menu::before{
+.nav-menu::before{
   content: '▼';
   font-size: 12px;
   width: 12px;
@@ -171,38 +151,46 @@ p.img{
   margin-left: -15px;
   margin-right: 5px;
 }
-.side-menu > a, .side-menu > span{
+/* アコーディオンメニューを開いたときの見出し　レイアウト */
+.acd-menu-wrapper > a{
   margin-top: 10px;
   margin-left: 10px;
   border-left: 5px solid #09c;
 }
-#works.open_menu::before{
+.acd-menu-wrapper > span{
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 5px solid #09c;
+  cursor: default;
+}
+#works-link.nav-menu::before{
   color: #09c;
 }
-#art-link.open_menu::before{
+#art-link.nav-menu::before{
   color: #f60;
 }
-#art-link.open_menu + .side-menu a{
+#art-link.nav-menu + .acd-menu-wrapper a{
   border-left-color: #f60;
 }
-.menu-sub a{
+.acd-menu-content a{
+  margin-left: 10px;
   border-left: none;
 }
-.menu-sub a::before{
+.acd-menu-content a::before{
   content: '>';
   font-size: 75%;
   line-height: 30px;
-  margin-left: 10px;
   padding-right: 5px;
 }
-#works + .side-menu .menu-sub a::before{
+#works-link + .acd-menu-wrapper .acd-menu-content a::before{
   color: #09c;
 }
-#art-link + .side-menu .menu-sub a::before{
+#art-link + .acd-menu-wrapper .acd-menu-content a::before{
   color:#f60;
 }
 /* ↑↑サイドメニュー　ここまで */
-
 /* ↑↑基本レイアウト　ここまで */
 
 /* ↓↓トップページ */
@@ -330,18 +318,6 @@ img.img-thumbnail{
   width: auto;
   float: left;
 }
-p.img{
-  width: 100%;
-  margin-bottom:20px;
-}
-p.text{
-  width: 100%;
-  margin:0 0 10px 10px;
-  padding:10px;
-}
-p.text::after{
-  clear: both;
-}
 .section-box{
   height:auto;
   margin:0 0 40px 20px;
@@ -350,11 +326,8 @@ p.text::after{
 .section-box::after{
   clear: both;
 }
-#art-page p.text{
-  clear: both;
-}
 
-/* 作品一覧ページのサムネイル */
+/* ↓↓作品一覧ページのサムネイル ここから */
 /* flexで並べる */
 .thumbnail_sort{
   display: flex;
@@ -415,11 +388,13 @@ div.thumbnail_sort a:hover{
   opacity: 0.45;
   transition: 0.5s;
 }
+/* ↑↑作品一覧ページのサムネイル ここまで */
 
 /* 作品の個別ページ */
 .preview-box{
   margin: 0 auto;
 }
+/* 見本の画像 */
 .preview-img{
   margin: 0 auto 50px auto;
   display: flex;
@@ -479,11 +454,11 @@ div.thumbnail_sort a:hover{
   padding: 10px;
   box-sizing: border-box;
 }
-.bt_all{
+.btn_green{
   margin: 30px;
   text-align: center;
 }
-.bt_all a{
+.btn_green a{
   padding: 8px 20px;
   border:2px solid #38a361;
   font-family: "游ゴシック";
@@ -491,7 +466,7 @@ div.thumbnail_sort a:hover{
   color: #38a361;
   border-radius: 10px;
 }
-.bt_all a:hover{
+.btn_green a:hover{
   background: #38a361;
   color: #fff;
   transition: 0.3s;
