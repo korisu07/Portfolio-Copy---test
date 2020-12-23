@@ -24,12 +24,12 @@
             <a href="https://chat.app.yk-portfolio012.com/" target="_blank"><img src="img/works/chat_preview.jpg" alt="チャットルームのプレビュー"></a>
           </div>
           <div class="preview-text">
-            <p>制作時間：約１ヶ月</p>
+            <p class="mb20">制作時間：約１ヶ月</p>
             
             <p>PHP + SQLを使い、簡易的なチャットルームを作ってみました。</p>
-            <p>セッション変数を使って、擬似的に入退室のような処理が行われます。</p>
+            <p class="mb20">セッション変数を使って、擬似的に入退室のような処理が行われます。</p>
 
-            <p>また、BOTや荒らし等の対策も仕込んでいます。(禁止ワード等)</p>
+            <p class="mb20">また、BOTや荒らし等の対策も仕込んでいます。(禁止ワード等)</p>
 
             <p><a href="https://github.com/korisu07/PHP-Chat" class="blue-text"><b>GitHubのソースコードはこちら</b></a></p>
             <p>（一部、対策用のコードは非公開です。）</p>
