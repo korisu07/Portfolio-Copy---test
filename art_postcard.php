@@ -21,7 +21,7 @@
         <h3>《絵はがき》</h3>
         <p>絵はがきです。ペンで直筆しました。Photoshopで加工しています。</p>
         <p>制作時間：一枚あたり 約30分～2時間</p>
-        <!-- <span class="bt_all"><a href="#">すべての作品を見る</a></span> -->
+        <!-- <span class="btn_green"><a href="#">すべての作品を見る</a></span> -->
 
         <div class="postcard-wrapper">
 
