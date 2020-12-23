@@ -14,29 +14,29 @@
           <a id="profile" href="/profile.php">Profile</a>
       </li>
       <li>
-          <div id="works" class="open_menu">Works</div>
-          <div class="side-menu">
+          <div id="works-link" class="nav-menu">Works</div>
+          <div class="acd-menu-wrapper">
             <a href="/works.php">作品一覧</a>
-            <a href="#">APP</a>
-            <div class="menu-sub">
+            <span>APP</span>
+            <div class="acd-menu-content">
               <span><a href="/chat.php">チャット</a></span>
               <span><a href="/memo.php">Memo.app</a></span>
             </div>
-            <a href="#">WEB</a>
-            <div class="menu-sub">
+            <span>WEB</span>
+            <div class="acd-menu-content">
               <span><a href="/oyasai.php">おやさい.net</a></span>
               <span><a href="/cafe-cookies.php">Cafe*Cookies</a></span>
             </div>
-            <a href="#">DTP</a>
-            <div class="menu-sub">
+            <span>DTP</span>
+            <div class="acd-menu-content">
               <span><a href="/kumayoke.php">チラシ</a></span>
               <span><a href="/work_postcard.php">ハガキ</a></span>
             </div>
           </div>
       </li>
       <li>
-          <div id="art-link" class="open_menu">Art</div>
-          <div class="side-menu">
+          <div id="art-link" class="nav-menu">Art</div>
+          <div class="acd-menu-wrapper">
             <a href="/art.php">作品一覧</a>
             <a href="/ocean.php">イラスト</a>
             <a href="/art_postcard.php">絵はがき</a>
