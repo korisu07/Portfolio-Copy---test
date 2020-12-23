@@ -157,18 +157,6 @@ p.img{
 }
 
 /* ↓↓サイドメニュー　ここから */
-#side-menu{
-  width:80%;/* 線の長さ調整用 */
-  margin: 0;
-  margin-left: 10px;
-  padding: 2px 0 8px 5px;
-}
-#side-menu li{
-  width:100%;
-  margin: 0;
-  margin-left: 10px;
-  padding: 2px 0 8px 5px;
-}
 /* 開くメニュー */
 .open_menu{
   cursor: pointer;
@@ -183,7 +171,7 @@ p.img{
   margin-left: -15px;
   margin-right: 5px;
 }
-.side-menu a{
+.side-menu > a, .side-menu > span{
   margin-top: 10px;
   margin-left: 10px;
   border-left: 5px solid #09c;
@@ -191,114 +179,28 @@ p.img{
 #works.open_menu::before{
   color: #09c;
 }
-#art.open_menu::before{
+#art-link.open_menu::before{
   color: #f60;
 }
-#art + .side-menu a{
+#art-link.open_menu + .side-menu a{
   border-left-color: #f60;
 }
 .menu-sub a{
   border-left: none;
-
 }
 .menu-sub a::before{
   content: '>';
   font-size: 75%;
   line-height: 30px;
+  margin-left: 10px;
   padding-right: 5px;
 }
 #works + .side-menu .menu-sub a::before{
   color: #09c;
 }
-#art + .side-menu .menu-sub a::before{
+#art-link + .side-menu .menu-sub a::before{
   color:#f60;
 }
-/* 「>」を先頭につける用 */
-.works_active{
-  padding-left: 5px;
-}
-.works_active::before{
-  content:">";
-  color: #09c;
-  margin-right: 5px;
-}
-.art_active{
-  padding-left: 5px;
-}
-.art_active::before{
-  content:">";
-  color: #f60;
-  margin-right: 5px;
-}
-/* サブメニュー用 */
-.menu-sub li:last-child{
-  border-bottom: 1px solid #fff;
-  margin-left: 0;
-}
-.menu-sub li a{
-  padding-left: 30px;
-  width: 90%;
-}
-.menu-sub li a::before{
-  content:"■";
-  font-size: 50%;
-  margin-right: 5px;
-}
-
-/* ↓シグネチャ */
-  /* 線を引く */
-.border_bt_blue{
-  width: 225px;
-  border-bottom: 1px solid #09c;
-  padding-bottom: 0;
-}
-.border_bt_orange{
-  width: 225px;
-  border-bottom: 1px solid #f60;
-  padding-bottom: 0;
-}
-#works-page a#works,#works-page a#works:hover,#art-page a#art,#art-page a#art:hover{
-  width:100%;
-  background-color: transparent;
-}
-#works-page a#works::after,#art-page a#art::after{
-  content:"";
-  width: 100%;
-  font-family: 'メイリオ';
-  margin-left:10px;
-  text-align: right;
-}
-#art-page a#art::after{
-  content:"―――――――――";
-  color: #f60;
-  margin-left:20px;
-  overflow: hidden;
-}
-#works-page a#works::after{
-  content:"――――――――";
-  color: #09c;
-  margin-left:15px;
-  overflow: hidden;
-}
-@media (max-width: 660px) {
-  .border_bt_blue{
-    width: 220px;
-  }
-  .border_bt_orange{
-    width: 220px;
-  }
-  #art-page a#art::after{
-    content:"――――――――";
-  }
-  #works-page a#works::after{
-    content:"―――――――";
-  }
-  .menu-sub li a {
-    padding-left: 0;
-    width: 90%;
-  }
-}
-/* ↑シグネチャ */
 /* ↑↑サイドメニュー　ここまで */
 
 /* ↑↑基本レイアウト　ここまで */
@@ -345,10 +247,6 @@ div#top-preview{
   opacity: 0.85;
 }
 /* ↑サムネここまで */
-/* 調整用 */
-#index h1{
-  margin-top: 0;
-}
 /* ↑↑トップページ　ここまで */
 
 /* プロフィールページ */
@@ -643,6 +541,7 @@ input#submitBtn{
 /* #top-previewの調整 */
 @media(max-width:960px){
   #index header h1{
+    margin-top: 30px;
     margin-bottom:20px;
   }
   #top-preview{
@@ -671,4 +570,10 @@ input#submitBtn{
 }
 .blue-text, .blue-text a{
   color: rgb(0, 92, 122);
+}
+.mb10{
+  margin-bottom: 10px;
+}
+.mb20{
+  margin-bottom: 20px;
 }
