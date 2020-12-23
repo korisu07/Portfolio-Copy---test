@@ -19,7 +19,7 @@
 
       <h2>Works</h2>
 
-      <h3 id="web-app-top">-WEB APP-</h3>
+      <h3 id="web-app-top">-APP-</h3>
       <div class="section-box thumbnail_sort">
         <div class="select_thumb small_thumb">
           <span>チャット</span>
@@ -33,7 +33,7 @@
 
       </div> <!-- /.section-box .thumbnail_sort --> 
 
-      <h3 id="web-page-top">-WEB PAGE-</h3>
+      <h3 id="web-page-top">-WEB-</h3>
       <div class="section-box thumbnail_sort">
         <div class="select_thumb small_thumb">
           <span>おやさい.net</span>
