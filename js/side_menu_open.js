@@ -23,13 +23,3 @@ menu_open.filter((link)=>{
 
   }, false);
 });
-
-// メニューを開いたまま画面幅を変更するとoverLayが残らないように対策
-
-var overLay = document.querySelector('label.menu_back');
-
-if(window.innerWidth >= 960){
-  overLay.style.display = 'none';
-}else{
-  overLay.style.display = '';
-}
