@@ -28,8 +28,7 @@
         </div>
         <div class="preview-text">
           <p>制作時間：6時間</p>
-            
-          <p>使用ソフト：Photoshop</p>
+          <p class="mb20">使用ソフト：Photoshop</p>
           
           <p>マウスだけを使用し、どこまで深海が表現できるかチャレンジした作品です。</p>
         </div>

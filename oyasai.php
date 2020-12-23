@@ -24,13 +24,13 @@
             <a href="web/ecsite/index.html" target="_blank"><img src="img/works/oyasai_preview.jpg" alt="EC siteのプレビュー"></a>
           </div>
           <div class="preview-text">
-            <p>制作時間：3日<br>
-            ターゲット層：30代～40代<br><br>
+            <p>制作時間：3日</p>
+            <p class="mb20">ターゲット層：30代～40代</p>
             
-            架空の野菜のECサイトを想定して制作しました。<br>
-            レスポンシブ対応。ファーストビューのみ。<br><br>
+            <p>架空の野菜のECサイトを想定して制作しました。</p>
+            <p class="mb20">レスポンシブ対応。ファーストビューのみ。</p>
 
-            見やすくシンプルなページになるよう意識しました。</p>
+            <p>見やすくシンプルなページになるよう意識しました。</p>
           </div>
         </div> <!-- /.preview-box -->
       </div> <!-- section-box -->

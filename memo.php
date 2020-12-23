@@ -24,13 +24,13 @@
             <a href="https://memo-kun.herokuapp.com/" target="_blank"><img src="img/works/memo_preview.jpg" alt="EC siteのプレビュー"></a>
           </div>
           <div class="preview-text">
-            <p>Node.js + Expressを使って制作しました。<br>
-            主に、素のJavaScriptの学習を目的として作りました。<br><br>
+            <p>Node.js + Expressを使って制作しました。</p>
+            <p class="mb20">主に、素のJavaScriptの学習を目的として作りました。</p>
 
-            Cookieによってメモが保存されます。<br>
-            長い文章の場合は、省略して表示されます。「メモを開く」をクリックすると、全文が表示されます。<br><br>
+            <p>Cookieによってメモが保存されます。</p>
+            <p class="mb20">長い文章の場合は、省略して表示されます。「メモを開く」をクリックすると、全文が表示されます。</p>
             
-            サーバーはherokuを使用しているため、アクセス時に少々時間がかかる場合がございます。</p>
+            <p>サーバーはherokuを使用しているため、アクセス時に少々時間がかかる場合がございます。</p>
           </div>
         </div> <!-- /.preview-box -->
       </div> <!-- section-box -->
