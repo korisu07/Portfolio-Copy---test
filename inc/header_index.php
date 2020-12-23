@@ -1,5 +1,5 @@
 <header>
-  <h1><a href="index.html">Y.K.Portfolio</a></h1>
+  <h1><a href="/index.php">Y.K.Portfolio</a></h1>
 
   <!-- ハンバーガーメニューのボタン用 -->
   <input id="menu" type="checkbox">
@@ -9,18 +9,18 @@
 
   <nav>
     <ul>
-      <li class="sp_top"><a href="index.php">Y.K.Portfolio</a></li>
+      <li class="sp_top"><a href="/index.php">Y.K.Portfolio</a></li>
       <li>
-          <a id="profile" href="profile.php">Profile</a>
+          <a id="profile" href="/profile.php">Profile</a>
       </li>
       <li>
-          <a id="works" href="works.php">Works</a>
+          <a id="works" href="/works.php">Works</a>
       </li>
       <li>
-          <a id="art" href="art.php">Art</a>
+          <a id="art" href="/art.php">Art</a>
       </li>
       <li>
-          <a id="contact" href="contact.php">Contact</a>
+          <a id="contact" href="/contact.php">Contact</a>
       </li>
     </ul>
 </nav>
