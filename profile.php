@@ -30,7 +30,8 @@
       <dl class="dl-block">
         <dt>GitHubアカウント</dt>
         <dd class="blue-text">
-          <p class="mb10"><a href="https://github.com/korisu07/" target="_blank">
+          <p>マイページはこちら↓</p>
+          <p class="mb20"><a href="https://github.com/korisu07/" target="_blank">
             https://github.com/korisu07/
           </a></p>
 
