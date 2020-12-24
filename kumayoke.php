@@ -4,7 +4,6 @@
   <head>
 
     <?php include './inc/head.php'; ?>
-    <link href="css/modal_img.css" rel="stylesheet">
 
   </head>
 
@@ -43,9 +42,6 @@
   <?php include './inc/footer.php'; ?>
 
 </div> <!-- container -->
-
-
-<script src="js/modal_img.js"></script>
 
 </body>
 </html>
