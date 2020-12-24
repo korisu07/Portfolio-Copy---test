@@ -19,9 +19,18 @@
       <h2>Works</h2>
       <h3 id="web">《メモくん - Memo.app》</h3>
       <div class="section-box">
+
+      <div class="mb20">
+        <p class="mb10">
+          <a href="https://memo-kun.herokuapp.com/" target="_blank">https://memo-kun.herokuapp.com/</a>
+        </p>
+        <p>※外部サイトが開きます。</p>
+        <p>※読み込みに時間がかかる場合があります。</p>
+      </div>
+
         <div class="preview-box">
           <div class="preview-img">
-            <a href="https://memo-kun.herokuapp.com/" target="_blank"><img src="img/works/memo_preview.jpg" alt="EC siteのプレビュー"></a>
+            <img src="img/works/memo_preview.jpg" alt="Memo.appのプレビュー">
           </div>
           <div class="preview-text">
             <p>Node.js + Expressを使って制作しました。</p>

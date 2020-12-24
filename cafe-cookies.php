@@ -20,11 +20,15 @@
       <h2>Works</h2>
       <h3 id="web">《Cafe*Cookies》</h3>
       <div class="section-box">
+
+      <div class="mb20">
+        <span class="mr20"><a href="/web/cafe/index.html" target="_blank">実際のページはこちら</a></span>
+        <span>※別タブで開きます。</span>
+      </div>
+
         <div class="preview-box">
           <div class="preview-img">
-            <a href="web/cafe/index.html" target="_blank">
-              <img src="img/works/cafeCookies_preview.jpg" alt="cafe site">
-            </a>
+            <img src="img/works/cafeCookies_preview.jpg" alt="cafe site">
           </div>
           <div class="preview-text">
             <p>制作時間：4時間</p>

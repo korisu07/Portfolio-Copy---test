@@ -19,12 +19,19 @@
       <h2>Works</h2>
       <h3 id="web">《おやさい.net》</h3>
       <div class="section-box">
+
+        <div class="mb20">
+        <span class="mr20"><a href="/web/ecsite/index.html" target="_blank" class="mr20">実際のページはこちら</a><span>
+          <span>※別タブで開きます。</span>
+        </div>
+
+
         <div class="preview-box">
           <div class="preview-img">
-            <a href="web/ecsite/index.html" target="_blank"><img src="img/works/oyasai_preview.jpg" alt="EC siteのプレビュー"></a>
+            <img src="img/works/oyasai_preview.jpg" alt="EC siteのプレビュー">
           </div>
           <div class="preview-text">
-            <p>制作時間：3日</p>
+            <p>トータル制作時間：約40時間</p>
             <p class="mb20">ターゲット層：30代～40代</p>
             
             <p>架空の野菜のECサイトを想定して制作しました。</p>
