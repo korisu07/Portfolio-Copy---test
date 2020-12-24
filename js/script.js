@@ -2,9 +2,9 @@ $(document).ready(function () {
 
     $("#index>#container").hide();
 
-    $("#index>#container").fadeIn(1000);
+    $("#index>#container").fadeIn(300);
 
     $("section").hide();
 
-    $("section").fadeIn(1000);
+    $("section").fadeIn(300);
 });
