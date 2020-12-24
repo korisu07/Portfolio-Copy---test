@@ -3,3 +3,4 @@
 </footer>
 
 <script src="./js/side_menu_open.js"></script>
+<script src="/js/modal_img.js"></script>
