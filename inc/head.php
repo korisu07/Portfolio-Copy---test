@@ -10,6 +10,8 @@
 <link href="css/style-sub.css" rel="stylesheet">
 <link href="css/menu.css" rel="stylesheet">
 
+<link href="css/modal_img.css" rel="stylesheet">
+
 <script src="js/jquery-3.4.1.min.js"></script>
 
 <script src="js/script.js"></script>
