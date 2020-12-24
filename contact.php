@@ -23,7 +23,7 @@
 
     <section>
       <h2>Contact</h2>
-      <p class="mb30">お問い合わせ等はこちらからお願いします。</p>
+      <p class="mb30">お問い合わせ等は、こちらからお願いします。</p>
           
         <form action="./contact_confirm.php" method="post">
           <p>
