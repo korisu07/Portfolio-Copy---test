@@ -7,7 +7,7 @@
 
   </head>
 
-<body id="works-page" class="drawer drawer--right">
+<body id="works-page">
 
 <div id="container">
 
