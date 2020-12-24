@@ -22,7 +22,7 @@
       <div class="section-box">
         <div class="preview-box">
           <div class="preview-img">
-            <a href="img/works/kumayoke.jpg" id="open_img">
+            <a href="img/works/kumayoke.jpg" class="open_img">
               <img src="img/kumayoke_thumb.jpg" alt="">
             </a>
           </div>

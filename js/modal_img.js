@@ -1,5 +1,5 @@
 const 
-imgArea = document.querySelectorAll('#open_img'),
+imgArea = document.querySelectorAll('.open_img'),
 divContainer = document.getElementById('container');
 
 const 
@@ -36,7 +36,7 @@ if(document.documentElement.clientWidth > 425){
       }, 200);
     
     });
-  })
+  });
   
   overlay.addEventListener('click', function (){
   

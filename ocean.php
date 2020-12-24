@@ -22,7 +22,7 @@
     <div class="section-box">
       <div class="preview-box">
         <div class="preview-img">
-          <a href="img/ocean.png" id="open_img">
+          <a href="img/ocean.png" class="open_img">
             <img src="img/ocean_preview.png" alt="深海" class="img-thumbnail">
           </a>
         </div>

@@ -26,7 +26,7 @@
         <div class="postcard-wrapper">
 
           <div class="postcard-box">
-            <a href="img/postcard/perfume.jpg" id="open_img">
+            <a href="img/postcard/perfume.jpg" class="open_img">
               <img src="img/postcard/perfume.jpg" alt="一歩、踏み出す勇気を">
               <div class="card-text">
                 <h3>一歩、踏み出す勇気を</h3>
@@ -36,7 +36,7 @@
           </div> <!-- /.postcard-box -->
 
           <div class="postcard-box">
-            <a href="img/postcard/cloud.jpg" id="open_img">
+            <a href="img/postcard/cloud.jpg" class="open_img">
               <img src="img/postcard/cloud.jpg" alt="入道雲">
               <div class="card-text">
                 <h3>入道雲</h3>
@@ -46,7 +46,7 @@
           </div> <!-- /.postcard-box -->
 
           <div class="postcard-box">
-            <a href="img/postcard/cookie-dream.jpg" id="open_img">
+            <a href="img/postcard/cookie-dream.jpg" class="open_img">
               <img src="img/postcard/cookie-dream.jpg" alt="Cookie dream.">
               <div class="card-text">
                 <h3>Cookie dream.</h3>
@@ -56,7 +56,7 @@
           </div> <!-- /.postcard-box -->
 
           <div class="postcard-box">
-            <a href="img/postcard/tyou.jpg" id="open_img">
+            <a href="img/postcard/tyou.jpg" class="open_img">
               <img src="img/postcard/tyou.jpg" alt="蝶々">
               <div class="card-text">
                 <h3>蝶々</h3>
@@ -66,7 +66,7 @@
           </div> <!-- /.postcard-box -->
 
           <div class="postcard-box">
-            <a href="img/postcard/shirokuma.jpg" id="open_img">
+            <a href="img/postcard/shirokuma.jpg" class="open_img">
               <img src="img/postcard/shirokuma.jpg" alt="しろくまさん">
               <div class="card-text">
                 <h3>しろくまさん</h3>
@@ -76,7 +76,7 @@
           </div> <!-- /.postcard-box -->
 
           <div class="postcard-box">
-            <a href="img/postcard/butineko.jpg" id="open_img">
+            <a href="img/postcard/butineko.jpg" class="open_img">
               <img src="img/postcard/butineko.jpg" alt="ぶちねこ">
               <div class="card-text">
                 <h3>ぶちねこちゃん</h3>
