@@ -29,10 +29,14 @@
 
       <dl class="dl-block">
         <dt>GitHubアカウント</dt>
-        <dd>
-          <a href="https://github.com/korisu07/" target="_blank" class="blue-text">
-            <b>https://github.com/korisu07/</b>
-          </a>
+        <dd class="blue-text">
+          <p class="mb10"><a href="https://github.com/korisu07/" target="_blank">
+            https://github.com/korisu07/
+          </a></p>
+
+          <p>このサイトのGithubページはこちら↓</p>
+          <p><a href="https://github.com/korisu07/Portfolio-PHP" target="_blank">https://github.com/korisu07/Portfolio-PHP</a></p>
+
         </dd>
       </dl>
 
@@ -69,7 +73,7 @@
 
       <dl class="dl-block">
         <dt>趣味</dt>
-        <dd>絵を描くことと、音楽をつくること。ゲームをすること。</dd>
+        <dd>絵を描くこと。音楽を聞くこと。ゲームをすること。</dd>
       </dl> <!-- dl-block -->
     
       <dl class="dl-block">
