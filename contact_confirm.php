@@ -5,14 +5,6 @@
   setcookie("contact[email]", (string) $_POST['email'], time()+300);
   setcookie("contact[content]", (string) $_POST['contact_content'], time()+300);
 
-  var_dump($_COOKIE["contact"]);
-
-  if( !isset($_COOKIE["contact"]) ){
-    echo '不正な操作です。';
-  }else{
-    $contact = $_COOKIE["contact"];
-  }
-
 ?>
 
 <!DOCTYPE html>
