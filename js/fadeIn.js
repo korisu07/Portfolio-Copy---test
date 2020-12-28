@@ -1,10 +1,12 @@
-$(document).ready(function () {
+const 
+  div_content = Array.from( document.getElementsByClassName('content') );
 
-    $("#index>#container").hide();
+function fadeIn_js(){
+	div_content.filter(obj =>{
+		obj.animate({
+			opacity:[0, 1]
+		}, 800);
+	})
+}
 
-    $("#index>#container").fadeIn(300);
-
-    $("section").hide();
-
-    $("section").fadeIn(300);
-});
+window.onload = fadeIn_js();
