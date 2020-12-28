@@ -16,7 +16,7 @@
   p.img{
     overflow: hidden;
   }
-  div#top-preview{
+  #js-top-preview{
     clear: both;
   }
   .content{

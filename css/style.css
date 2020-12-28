@@ -144,7 +144,7 @@ footer{
 #index .content{
   height:calc( 80vh - 100px );
 }
-div#top-preview{
+#js-top-preview{
   background-position-x: left;
 }
 /* トップページdiv#preview用のjQueryで付与するクラス */
@@ -173,7 +173,7 @@ div#top-preview{
   float:right;
   width:70%;
 }
-#top-preview{
+#js-top-preview{
   float:right;
   margin-top:50px;
   margin-right:300px;
@@ -488,13 +488,13 @@ input[type="submit"]{
 /* ↑↑お問い合わせ */
 
 
-/* #top-previewの調整 */
+/* #js-top-previewの調整 */
 @media(max-width:960px){
   #index header h1{
     margin-top: 30px;
     margin-bottom:20px;
   }
-  #top-preview{
+  #js-top-preview{
     margin: 0 calc( (100vw - 400px) / 2 );
     margin-top: 50px;
     margin-left:250px;
