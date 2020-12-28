@@ -14,7 +14,7 @@
           <a id="profile" href="/profile.php">Profile</a>
       </li>
       <li>
-          <div class="js-menu-head works-link">Works</div>
+          <div id="works" class="js-menu-head works-link">Works</div>
           <div class="js-menu-wrapper">
             <a href="/works.php">作品一覧</a>
             <span>APP</span>
@@ -35,7 +35,7 @@
           </div>
       </li>
       <li>
-          <div class="js-menu-head art-link">Art</div>
+          <div id="art" class="js-menu-head art-link">Art</div>
           <div class="js-menu-wrapper">
             <a href="/art.php">作品一覧</a>
             <a href="/ocean.php">イラスト</a>
