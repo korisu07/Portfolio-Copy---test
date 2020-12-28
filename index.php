@@ -10,8 +10,7 @@
 
     <?php include './inc/header_index.php'; ?>
 
-      <div id="top-preview" class="image-first">
-      </div> <!-- top-preview -->
+      <div id="js-top-preview"></div>
 
     </div> <!-- /.content -->
 
