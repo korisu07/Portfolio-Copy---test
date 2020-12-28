@@ -44,13 +44,13 @@ input[type="checkbox"] {
   border-left: 5px solid #09c;
   cursor: default;
 }
-#works-link.nav-menu-head::before{
+.works-link::before{
   color: #09c;
 }
-#art-link.nav-menu-head::before{
+.art-link::before{
   color: #f60;
 }
-#art-link.nav-menu-head + .acd-menu-wrapper a{
+.art-link + .acd-menu-wrapper a{
   border-left-color: #f60;
 }
 .acd-menu-content a{
@@ -63,10 +63,10 @@ input[type="checkbox"] {
   line-height: 30px;
   padding-right: 5px;
 }
-#works-link + .acd-menu-wrapper .acd-menu-content a::before{
+.works-link + .acd-menu-wrapper .acd-menu-content a::before{
   color: #09c;
 }
-#art-link + .acd-menu-wrapper .acd-menu-content a::before{
+.art-link + .acd-menu-wrapper .acd-menu-content a::before{
   color:#f60;
 }
 
@@ -81,7 +81,7 @@ input[type="checkbox"] {
   header nav{
     margin: 0;
   }
-  #container,header h1{
+  .container, header h1{
     margin-top: 0;
     padding-top: 0;
   }
