@@ -1,6 +1,6 @@
 const 
 imgArea = document.querySelectorAll('.open_img'),
-divContainer = document.getElementById('container');
+divContainer = document.querySelector('.container');
 
 const 
 tag = `
