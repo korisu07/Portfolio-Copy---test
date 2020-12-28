@@ -144,31 +144,12 @@ footer{
 #index .content{
   height:calc( 80vh - 100px );
 }
+/* ↓フェードで切り替わる画像　ここから */
 #js-top-preview{
   background-position-x: left;
-}
-/* トップページdiv#preview用のjQueryで付与するクラス */
-.image-first{
   background-image: url(../img/top.png);
   background-repeat: no-repeat;
 }
-.image-profile{
-  background-image: url(../img/profile.png);
-  background-repeat: no-repeat;
-}
-.image-works{
-  background-image: url(../img/works.png);
-  background-repeat: no-repeat;
-}
-.image-art{
-  background-image: url(../img/art.png);
-  background-repeat: no-repeat;
-}
-.image-contact{
-  background-image: url(../img/contact.png);
-  background-repeat: no-repeat;
-}
-/* ↓トップページ　作品サムネイル用の.top_contentとdiv */
 .top_content{
   float:right;
   width:70%;
@@ -181,7 +162,7 @@ footer{
   height:400px;
   opacity: 0.85;
 }
-/* ↑サムネここまで */
+/* ↓フェードで切り替わる画像　ここまで */
 /* ↑↑トップページ　ここまで */
 
 /* プロフィールページ */
