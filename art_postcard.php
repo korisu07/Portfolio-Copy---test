@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-  <head>
-
-    <?php include './inc/head.php'; ?>
-
-  </head>
+<head>
+  <?php include './inc/head.php'; ?>
+</head>
 
 <body id="art-page">
+  <div class="container main-bg-img">
+    <div class="content">
 
-  <div id="container">
-
-    <div id="content">
-
-    <?php include './inc/header.php'; ?>
+      <?php include './inc/header.php'; ?>
 
       <section>
         <h2>Art</h2>
@@ -88,11 +83,11 @@
 
       </section>
 
-    </div> <!-- /#content -->
+    </div> <!-- /.content -->
 
-  <?php include './inc/footer.php'; ?>
+    <?php include './inc/footer.php'; ?>
   
-  </div> <!-- /#container -->
+  </div> <!-- /.container -->
   
 </body>
 </html>

@@ -45,28 +45,26 @@
 
 <!DOCTYPE html>
 <html lang="ja">
-
-  <head>
-
-    <?php include './inc/head.php'; ?>
-
-  </head>
+<head>
+  <?php include './inc/head.php'; ?>
+</head>
 
 <body id="contact-page">
+  <div class="container main-bg-img">
+    <div class="content">
 
-<div id="container">
+      <?php include './inc/header.php'; ?>
 
-  <div id="content">
+      <section>
+        <h2>送信確認</h2>
+        <p class="mb30"><?= $result_message ?></p>
+    
+      </section>
 
-    <?php include './inc/header.php'; ?>
+    </div> <!-- /.content -->
 
-    <section>
-      <h2>送信確認</h2>
-      <p class="mb30"><?= $result_message ?></p>
-  
-    </section>
-
-    <?php include './inc/footer.php'; ?>
-
+      <?php include './inc/footer.php'; ?>
+      
+  </div> <!-- /.container -->
 </body>
 </html>

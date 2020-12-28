@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-  <head>
-
-    <?php include './inc/head.php'; ?>
-
-  </head>
+<head>
+  <?php include './inc/head.php'; ?>
+</head>
 
 <body id="works-page">
-
-<div id="container">
-
-  <div id="content">
+<div class="container main-bg-img">
+  <div class="content">
 
     <?php include './inc/header.php'; ?>
 
@@ -35,11 +30,11 @@
       </div> <!-- section-box -->
          
     </section>
-  </div> <!-- content -->
+  </div> <!-- /.content -->
 
   <?php include './inc/footer.php'; ?>
 
-</div> <!-- container -->
+</div> <!-- /.container -->
 
 </body>
 </html>
