@@ -1,6 +1,6 @@
 const
-  menu_open = Array.from(document.getElementsByClassName('nav-menu')),
-  side_menus = Array.from(document.getElementsByClassName('acd-menu-wrapper'));
+  menu_open = Array.from(document.getElementsByClassName('js-menu-head')),
+  side_menus = Array.from(document.getElementsByClassName('js-menu-wrapper'));
 
 side_menus.forEach( (menu) =>{
   menu.style.height = '0px';

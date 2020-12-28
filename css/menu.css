@@ -1,7 +1,7 @@
 
 /* ↑↑サイドメニュー基本レイアウト　ここから */
 /* 開くメニュー */
-.nav-menu-head{
+.js-menu-head{
   cursor: pointer;
   padding-left: 10px;
 }
@@ -21,7 +21,7 @@ input[type="checkbox"] {
   position: fixed;
   right: -100%;
 }
-.nav-menu-head::before{
+.js-menu-head::before{
   content: '▼';
   font-size: 12px;
   width: 12px;
@@ -31,12 +31,12 @@ input[type="checkbox"] {
   margin-right: 5px;
 }
 /* アコーディオンメニューを開いたときの見出し　レイアウト */
-.acd-menu-wrapper > a{
+.js-menu-wrapper > a{
   margin-top: 10px;
   margin-left: 10px;
   border-left: 5px solid #09c;
 }
-.acd-menu-wrapper > span{
+.js-menu-wrapper > span{
   display: block;
   margin-top: 10px;
   margin-left: 10px;
@@ -50,23 +50,23 @@ input[type="checkbox"] {
 .art-link::before{
   color: #f60;
 }
-.art-link + .acd-menu-wrapper a{
+.art-link + .js-menu-wrapper a{
   border-left-color: #f60;
 }
-.acd-menu-content a{
+.js-menu-content a{
   margin-left: 10px;
   border-left: none;
 }
-.acd-menu-content a::before{
+.js-menu-content a::before{
   content: '>';
   font-size: 75%;
   line-height: 30px;
   padding-right: 5px;
 }
-.works-link + .acd-menu-wrapper .acd-menu-content a::before{
+.works-link + .js-menu-wrapper .js-menu-content a::before{
   color: #09c;
 }
-.art-link + .acd-menu-wrapper .acd-menu-content a::before{
+.art-link + .js-menu-wrapper .js-menu-content a::before{
   color:#f60;
 }
 
