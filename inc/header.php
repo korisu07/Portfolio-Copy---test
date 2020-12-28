@@ -2,14 +2,14 @@
   <h1><a href="/index.php">Y.K.Portfolio</a></h1>
 
   <!-- ハンバーガーメニューのボタン用 -->
-  <input id="menu" type="checkbox">
-  <label for="menu" class="menu_open"></label>
-  <label for="menu" class="menu_back"></label>
+  <input id="menu-checkbox" name="menu-checkbox" type="checkbox">
+  <label for="menu-checkbox" class="menu-open"></label>
+  <label for="menu-checkbox" class="menu-back"></label>
   <!-- ハンバーガーメニューのボタン用 -->
 
   <nav>
     <ul>
-      <li class="sp_top"><a href="/index.php">Y.K.Portfolio</a></li>
+      <li class="sp-top"><a href="/index.php">Y.K.Portfolio</a></li>
       <li>
           <a id="profile" href="/profile.php">Profile</a>
       </li>
@@ -35,7 +35,7 @@
           </div>
       </li>
       <li>
-          <div id="art-link" class="nav-menu">Art</div>
+          <div id="art-link" class="nav-menu-head">Art</div>
           <div class="acd-menu-wrapper">
             <a href="/art.php">作品一覧</a>
             <a href="/ocean.php">イラスト</a>
