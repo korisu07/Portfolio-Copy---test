@@ -2,7 +2,7 @@
   <h1><a href="/index.php">Y.K.Portfolio</a></h1>
 
   <!-- ハンバーガーメニューのボタン用 -->
-  <input id="menu-checkbox" name="menu-checkbox" type="checkbox">
+  <input id="menu-checkbox" type="checkbox">
   <label for="menu-checkbox" class="menu-open"></label>
   <label for="menu-checkbox" class="menu-back"></label>
   <!-- ハンバーガーメニューのボタン用 -->
