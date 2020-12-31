@@ -431,7 +431,22 @@ input[type="submit"]{
   padding: 5px 10px;
 }
 
-/* 確認画面のレイアウト */
+/* 入力欄 見出しのレイアウト */
+label{
+  padding-bottom: 10px;
+}
+label span{
+  background-color: #ececec;
+  margin-left: 10px;
+  padding: 0 3px;
+  border-radius: 5px;
+}
+/* 必須事項の色を変える */
+.form_req{
+  background-color: #ffe8ca;
+}
+
+/* 送信 確認画面のレイアウト */
 #contact-page table{
   margin-left: 30px;
   width: 85%;
