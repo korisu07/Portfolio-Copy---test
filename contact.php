@@ -22,19 +22,19 @@
             
           <form action="./contact_confirm.php" method="post">
             <p>
-              <label>お名前（必須）：</label>
+              <label>お名前<span class="form_req">必須</span></label>
               <input type="text" name="name" placeholder="全角で入力してください" required>
             </p>
             <p>
-              <label>電話番号（任意）：</label>
+              <label>電話番号<span>任意</span></label>
               <input type="tel" name="tel" placeholder="ハイフンなしで入力してください">
             </p>
             <p>
-              <label>メールアドレス（必須）：</label>
+              <label>メールアドレス<span class="form_req">必須</span></label>
               <input type="email" name="email" placeholder="半角英数字で入力してください" required>
             </p>
             <p>
-              <label>お問い合わせ内容（必須）：</label>
+              <label>お問い合わせ内容<span class="form_req">必須</span></label>
               <textarea name="contact_content" placeholder="具体的な内容を入力してください。" required></textarea>
             </p>
             <p>
@@ -49,7 +49,6 @@
     <?php include './inc/footer.php'; ?>
 
   </div> <!-- /.container -->
-
 
 </body>
 </html>
