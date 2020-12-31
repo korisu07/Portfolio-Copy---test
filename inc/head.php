@@ -6,6 +6,8 @@
 
 <title>Y.K.Portfolio</title>
 
+<link rel="icon" href="/img/favicon.ico">
+
 <link href="css/style.css" rel="stylesheet">
 <link href="css/style-sub.css" rel="stylesheet">
 <link href="css/menu.css" rel="stylesheet">
