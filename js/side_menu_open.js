@@ -1,24 +1,58 @@
 const
-  menu_open = Array.from(document.getElementsByClassName('js-menu-head')),
-  side_menus = Array.from(document.getElementsByClassName('js-menu-wrapper'));
+  toggle_main_menu = Array.from(document.getElementsByClassName('js-menu-head')),
+  toggle_small_menus = Array.from(document.getElementsByClassName('js-toggle_small_menu')),
 
-side_menus.forEach( (menu) =>{
+  main_menus = Array.from(document.getElementsByClassName('js-menu-wrapper')),
+  small_menus = Array.from(document.getElementsByClassName('js-menu-content'));
+
+// 始めは閉じた状態にしておく。
+main_menus.filter( (menu) =>{
   menu.style.height = '0px';
   menu.style.display = 'none';
 });
 
-menu_open.filter((link)=>{
+small_menus.filter( (menu) =>{
+  menu.style.height = '0px';
+  menu.style.display = 'none';
+});
+
+
+function open_side_menu(menu_box){
+  menu_box.style.height = '';
+  menu_box.style.display = '';
+}
+
+function close_side_menu(menu_box){
+  menu_box.style.height = '0px';
+  menu_box.style.display = 'none';
+}
+
+
+toggle_main_menu.filter((link)=>{
   link.addEventListener('click', function (){
 
     const 
-      sub_menu = link.nextElementSibling;
+      next_box = link.nextElementSibling;
 
-    if(sub_menu.clientHeight > 0){
-      sub_menu.style.height = '0px';
-      sub_menu.style.display = 'none';
+    if(next_box.clientHeight > 0){
+      close_side_menu(next_box);
     }else{
-      sub_menu.style.height = '';
-      sub_menu.style.display = '';
+      open_side_menu(next_box);
+    }
+
+  }, false);
+});
+
+toggle_small_menus.filter((link)=>{
+  link.addEventListener('click', function (){
+
+    const 
+      next_box = link.nextElementSibling;
+
+    if(next_box.clientHeight > 0){
+      close_side_menu(next_box);
+    }else{
+      open_side_menu(next_box);
     }
 
   }, false);
