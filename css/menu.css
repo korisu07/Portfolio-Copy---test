@@ -1,10 +1,11 @@
 
 /* ↑↑サイドメニュー基本レイアウト　ここから */
-/* 開くメニュー */
+/* メニューの見出し */
 .js-menu-head{
   cursor: pointer;
   padding-left: 10px;
 }
+/* toggle */
 .menu-open, .menu-back{
   display: none;
   cursor: pointer;
@@ -21,6 +22,9 @@ input[type="checkbox"] {
   position: fixed;
   right: -100%;
 }
+/* アコーディオンメニューを開いたときの見出し　レイアウト */
+
+/* 大見出しのレイアウト */
 .js-menu-head::before{
   content: '▼';
   font-size: 12px;
@@ -30,28 +34,24 @@ input[type="checkbox"] {
   margin-left: -15px;
   margin-right: 5px;
 }
-/* アコーディオンメニューを開いたときの見出し　レイアウト */
+
+/* メニューのレイアウト */
 .js-menu-wrapper > a{
   margin-top: 10px;
-  margin-left: 10px;
-  border-left: 5px solid #09c;
 }
-.js-menu-wrapper > span{
+.js-menu-wrapper a::before{
+  content: '>';
+  font-size: 75%;
+  line-height: 30px;
+  padding-right: 5px;
+}
+.js-toggle_small_menu{
   display: block;
   margin-top: 10px;
   margin-left: 10px;
   padding-left: 10px;
   border-left: 5px solid #09c;
-  cursor: default;
-}
-.works-link::before{
-  color: #09c;
-}
-.art-link::before{
-  color: #f60;
-}
-.art-link + .js-menu-wrapper a{
-  border-left-color: #f60;
+  cursor: pointer;
 }
 .js-menu-content a{
   margin-left: 10px;
@@ -63,13 +63,28 @@ input[type="checkbox"] {
   line-height: 30px;
   padding-right: 5px;
 }
+
+/* 色設定 */
+/* すべてのbefore要素に色を適用する */
+.works-link::before, .works-link *::before{
+  color: #09c;
+}
+.art-link::before, .art-link *::before{
+  color: #f60;
+}
+/* 隣接した見出しの色を適用する */
+.works-link + .js-menu-wrapper a::before{
+  color: #09c;
+}
+.art-link + .js-menu-wrapper a::before{
+  color: #f60;
+}
 .works-link + .js-menu-wrapper .js-menu-content a::before{
   color: #09c;
 }
 .art-link + .js-menu-wrapper .js-menu-content a::before{
-  color:#f60;
+  color: #f60;
 }
-
 /* ↑↑サイドメニュー基本レイアウト　ここまで */
 
 /* レスポンシブ */
