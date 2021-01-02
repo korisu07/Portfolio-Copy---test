@@ -6,26 +6,14 @@ const
   small_menus = Array.from(document.getElementsByClassName('js-menu-content'));
 
 // 始めは閉じた状態にしておく。
-main_menus.filter( (menu) =>{
-  menu.style.height = '0px';
-  menu.style.display = 'none';
+// 大メニュー
+main_menus.filter( (menu_of_main) =>{
+  display_to_none(menu_of_main);
 });
-
-small_menus.filter( (menu) =>{
-  menu.style.height = '0px';
-  menu.style.display = 'none';
+// 小メニュー
+small_menus.filter( (menu_of_sub) =>{
+  display_to_none(menu_of_sub);
 });
-
-
-function open_side_menu(menu_box){
-  menu_box.style.height = '';
-  menu_box.style.display = '';
-}
-
-function close_side_menu(menu_box){
-  menu_box.style.height = '0px';
-  menu_box.style.display = 'none';
-}
 
 
 toggle_main_menu.filter((link)=>{
@@ -35,9 +23,9 @@ toggle_main_menu.filter((link)=>{
       next_box = link.nextElementSibling;
 
     if(next_box.clientHeight > 0){
-      close_side_menu(next_box);
+      display_to_none(next_box);
     }else{
-      open_side_menu(next_box);
+      display_to_default(next_box);
     }
 
   }, false);
@@ -50,9 +38,9 @@ toggle_small_menus.filter((link)=>{
       next_box = link.nextElementSibling;
 
     if(next_box.clientHeight > 0){
-      close_side_menu(next_box);
+      display_to_none(next_box);
     }else{
-      open_side_menu(next_box);
+      display_to_default(next_box);
     }
 
   }, false);
