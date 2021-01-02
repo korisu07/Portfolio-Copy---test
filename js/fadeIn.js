@@ -1,12 +1,4 @@
 const 
-  div_content = Array.from( document.getElementsByClassName('content') );
+  div_content = document.querySelector('.content');
 
-function fadeIn_js(){
-	div_content.filter(obj =>{
-		obj.animate({
-			opacity:[0, 1]
-		}, 800);
-	})
-}
-
-window.onload = fadeIn_js();
+window.onload = opacity_0_to_100(div_content);
