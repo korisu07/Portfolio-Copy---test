@@ -56,7 +56,7 @@
       <?php include './inc/header.php'; ?>
 
       <section>
-        <h2>送信確認</h2>
+        <h2>送信結果</h2>
         <p class="mb30"><?= $result_message ?></p>
     
       </section>
