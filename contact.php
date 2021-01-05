@@ -20,7 +20,7 @@
         <h2>Contact</h2>
         <p class="mb30">お問い合わせ等は、こちらからお願いします。</p>
             
-          <form action="./contact_confirm.php" method="post">
+          <form action="./contact_submit.php" method="post">
             <p>
               <label>お名前<span class="form_req">必須</span></label>
               <input type="text" name="name" placeholder="全角で入力してください" required>
