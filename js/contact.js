@@ -1,37 +1,20 @@
-$(document).ready(function () {
-  $("#googleform").submit(function (event) {
-      var data = new FormData;
-      //名前を取得
-      data.append('entry.2005620554', $("#googleform input[name=name]").val());
+'use strict';
 
-      data.append('entry.1166974658', $("#googleform input[name=tel]").val());
+console.log(document.cookie);
 
-      data.append('entry.1045781291', $("#googleform input[name=email]").val());
-
-      data.append('entry.839337160', $("#googleform textarea[name=otoiawase]").val());
+const 
+  // input属性をそれぞれ読み込み
+  cookie_array = document.cookie.split('; ');
   
-      $.ajax({
-          
-          url: "https://docs.google.com/forms/d/e/1FAIpQLSfSmkS9YXfvXFGfyEMPb8474WoBztg1K4V9kzURqtL4NnmQCQ/formResponse",
+let 
+  new_array = cookie_array.map( (cookie)=>{
+    let index = cookie.indexOf(']=') + 2;
+    // cookieの内容をデコードして表示
+    return decodeURIComponent(cookie.substr(index));
+  } );
 
-          data: data,
-          processData: false,
-          contentType: false,
-          type: "POST",
-          dataType: "xml",
-          statusCode: {
-              0: function () {
-                  //送信に成功したときの処理
-                  $("form").slideUp();
-                  $('#success').slideDown();
-              },
-              200: function () {
-                  //送信に失敗したときの処理
-                  $("form").slideUp();
-                  $('#error').slideDown();
-              }
-          }
-      });
-      event.preventDefault();
-  });
-});
+  // 連想配列にしたい…
+  console.log(new_array[0]);
+  console.log(new_array[1]);
+  console.log(new_array[2]);
+  console.log(new_array[3]);
