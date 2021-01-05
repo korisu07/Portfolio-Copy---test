@@ -1,9 +1,3 @@
-<?php 
-  if( isset($_COOKIE["flagment"]) ){
-    setcookie("flagment", "", time()-300);
-  }
-?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -47,6 +41,12 @@
     </div> <!-- /.content -->
 
     <?php include './inc/footer.php'; ?>
+
+    <?php 
+      if( isset($_COOKIE['contact']) ){
+        echo '<script src="/js/contact.js"></script>';
+      }
+    ?>
 
   </div> <!-- /.container -->
 
