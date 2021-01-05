@@ -1,12 +1,3 @@
-<?php 
-
-  setcookie("contact[name]", (string) $_POST['name'], time()+300);
-  setcookie("contact[tel]", (string) $_POST['tel'], time()+300);
-  setcookie("contact[email]", (string) $_POST['email'], time()+300);
-  setcookie("contact[content]", (string) $_POST['contact_content'], time()+300);
-
-?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -33,37 +24,40 @@
           <tbody>
             <tr>
               <th>お名前：</th>
-              <td><?= $_POST['name'] ?></td>
+              <td><?= $_COOKIE['contact']['name']; ?></td>
             </tr>
 
             <tr>
-              <th>電話番号：</th>
+              <th>電話番号(任意)：</th>
               <td>
                 <?php 
-                  if( is_null($_POST['tel']) || $_POST['tel'] === ""){
-                    echo '未入力です。(任意)';
+                  if( !isset($_COOKIE['contact']['tel']) || $_COOKIE['contact']['tel'] === ''){
+                    echo '未入力です。';
                   }else{
-                    echo $_POST['tel'];
+                    echo $_COOKIE['contact']['tel'];
                   } ?>
               </td>
             </tr>
 
             <tr>
               <th>メールアドレス：</th>
-              <td><?= $_POST['email'] ?></td>
+              <td><?= $_COOKIE['contact']['email']; ?></td>
             </tr>
             <tr>
               <th>お問い合わせ内容：</th>
-              <td><pre><?= $_POST['contact_content'] ?></pre></td>
+              <td><pre><?= $_COOKIE['contact']['content']; ?></pre></td>
             </tr>
             
           </tbody>
         </table>
 
-        <form action="/contact_result.php" method="post" class="confirm-btn-wrapp"> 
-          <input type="submit" value="はい" name="submit_yes">
-          <input type="submit" value="いいえ" name="submit_no">
-        </form>
+        <div class="confirm-btn-wrapp">
+          <form action="/contact_result.php" method="post"> 
+            <input type="submit" value="送信" name="submit_yes">
+            <input type="submit" value="内容を修正" name="submit_fix">
+            <input type="submit" value="取り消し" name="submit_cancel">
+          </form>
+        </div><!-- /.confirm-btn-wrapp -->
     
       </section>
     </div> <!-- /.content -->
@@ -71,5 +65,6 @@
     <?php include './inc/footer.php'; ?>
       
   </div> <!-- /.container -->
+
 </body>
 </html>
