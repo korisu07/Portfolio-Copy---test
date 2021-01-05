@@ -36,6 +36,10 @@
     header('Location: /contact.php', 307);
 
     if( isset($_COOKIE["flagment"]) ){
+      setcookie("contact[name]", "", time()-300);
+      setcookie("contact[tel]", "", time()-300);
+      setcookie("contact[email]", "", time()-300);
+      setcookie("contact[content]", "", time()-300);
       setcookie("flagment", "", time()-300);
     }
 
