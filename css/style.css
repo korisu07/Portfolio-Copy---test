@@ -9,7 +9,7 @@ body, pre{
   font-size: 20px;
   font-family: '游明朝', 'ヒラギノ明朝体 W3', serif;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #fcfcfc;
   width:100%;
   height:100%;
 }
@@ -413,23 +413,39 @@ div.thumbnail_sort a:hover{
 form p{
   margin-bottom:20px;
 }
-input {
+/* 共通のフォントやレイアウトの設定 */
+input, textarea{
   display: block;
-  width: 380px;
-  height:auto;
+  /* font */
+  font-family: Arial, sans-serif;
   font-size: 80%;
+  line-height: 0.8rem;
+  /* border */
+  border-radius: 3px;
+  border:1px solid rgb(118, 118, 118);
+  /* padding */
+  padding: 8px;
+}
+/* フォーカス時の設定 */
+input:focus, textarea:focus{
+  border: 1px solid rgb(118, 118, 118);
+  outline: rgb(104, 104, 104) auto 1px;
+}
+/* それぞれのレイアウト設定 */
+input[type="text"],input[type="tel"],input[type="email"] {
+  width: 60%;
+  height: 10%;
 }
 textarea {
-  display: block;
-  width: 380px;
+  width: 60%;
   height: 120px;
-  font-size: 100%;
-  padding: 5px;
 }
-input[type="submit"]{
+/* ボタン系のレイアウト */
+input[type="submit"], input[type="button"]{
   display: inline-block;
-  width: 100px;
-  padding: 5px 10px;
+  min-width: 100px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 /* 入力欄 見出しのレイアウト */
@@ -453,6 +469,7 @@ label span{
   width: 85%;
   border-collapse: collapse;
   font-size: 90%;
+  background-color: #fcfcfc;
 }
 #contact-page th,#contact-page td{
   border: 1px solid #000;
