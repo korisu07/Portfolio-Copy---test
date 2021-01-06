@@ -54,6 +54,9 @@
         <div class="confirm-btn-wrapp">
           <form action="/contact_result.php" method="post"> 
             <input type="submit" value="送信" name="submit_yes">
+          </form>
+
+          <form action="/contact.php" method="post">
             <input type="submit" value="内容を修正" name="submit_fix">
             <input type="submit" value="取り消し" name="submit_cancel">
           </form>
