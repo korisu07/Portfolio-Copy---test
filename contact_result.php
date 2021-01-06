@@ -41,6 +41,7 @@
 
     header('Location: /contact.php', 307);
 
+    // もし何かの間違いでflagmentが入っていた場合、削除
     if( isset($_COOKIE["flagment"]) ){
       setcookie("flagment", "", time()-300);
     }
@@ -50,11 +51,13 @@
     
     header('Location: /contact.php', 307);
 
+    // Cookieをすべて削除
     setcookie("contact[name]", "", time()-300);
     setcookie("contact[tel]", "", time()-300);
     setcookie("contact[email]", "", time()-300);
     setcookie("contact[content]", "", time()-300);
 
+    // もし何かの間違いでflagmentが入っていた場合、削除
     if( isset($_COOKIE["flagment"]) ){
       setcookie("flagment", "", time()-300);
     }
