@@ -40,12 +40,22 @@
 
     </div> <!-- /.content -->
 
-    <?php include './inc/footer.php'; ?>
-
     <?php 
-      if( isset($_COOKIE['contact']) ){
+      // 「内容を修正」を押していて、かつCookieが残っている場合にJSを読み込み
+      if( isset($_COOKIE['contact']) && isset($_POST['submit_fix']) ){
         echo '<script src="/js/fix_contact.js"></script>';
+      }// その他の場合、Cookieを削除
+      else if(isset($_COOKIE['contact'])){
+          // Cookieをすべて削除
+        setcookie("contact[name]", "", time()-300);
+        setcookie("contact[tel]", "", time()-300);
+        setcookie("contact[email]", "", time()-300);
+        setcookie("contact[content]", "", time()-300);
       }
+
+      // footer 読み込み
+      include './inc/footer.php';
+
     ?>
 
   </div> <!-- /.container -->
