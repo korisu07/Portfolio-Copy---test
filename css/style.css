@@ -488,20 +488,21 @@ label span{
 }
 .confirm-btn-wrapp{
   width: 85%;
+  display: flex;
   margin: 0 auto;
   padding-top: 30px;
 }
 .confirm-btn-wrapp form{
   display: flex;
-  margin: 0 auto;
+  float: left;
 }
 .confirm-btn-wrapp input{
   margin-right: 30px;
 }
-.confirm-btn-wrapp input:first-child{
+.confirm-btn-wrapp form:first-child{
   margin-left: auto;
 }
-.confirm-btn-wrapp input:last-child{
+.confirm-btn-wrapp form:last-child{
   margin-right: auto;
 }
 /* ↑↑お問い合わせ */
