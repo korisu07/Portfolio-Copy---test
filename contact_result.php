@@ -1,12 +1,14 @@
 <?php
 
+// どのボタンを押したかを判定
+// 「送信」を押した場合に発動
   if( isset($_POST['submit_yes']) ){
 
-    if( !isset($_COOKIE["flagment"] )){
+    if( !isset($_COOKIE["flagment_time"] )){
 
       // 重複防止のフラグ。有効期限は5分
       // このフラグが残っている間は、再投稿できない。
-      setcookie("flagment", "1", time()+300);
+      setcookie("flagment_time", "1", time()+300);
 
       // ここに送信処理
       
@@ -35,35 +37,9 @@
       $result_head = '送信に失敗しました。';
       $result_message = '内容が重複しているか、不正な操作が行われました。';
 
-    }
+    } // end if - 連投判定
 
-  }else if( isset($_POST['submit_fix']) ){
-
-    header('Location: /contact.php', 307);
-
-    // もし何かの間違いでflagmentが入っていた場合、削除
-    if( isset($_COOKIE["flagment"]) ){
-      setcookie("flagment", "", time()-300);
-    }
-
-
-  }else if( isset($_POST['submit_cancel']) ){
-    
-    header('Location: /contact.php', 307);
-
-    // Cookieをすべて削除
-    setcookie("contact[name]", "", time()-300);
-    setcookie("contact[tel]", "", time()-300);
-    setcookie("contact[email]", "", time()-300);
-    setcookie("contact[content]", "", time()-300);
-
-    // もし何かの間違いでflagmentが入っていた場合、削除
-    if( isset($_COOKIE["flagment"]) ){
-      setcookie("flagment", "", time()-300);
-    }
-
-
-  }
+  } // end if - どのボタンを押してきたか判定
 ?>
 
 <!DOCTYPE html>
@@ -88,7 +64,6 @@
     </div> <!-- /.content -->
 
       <?php include './inc/footer.php'; ?>
-      <script src="/js/contact.js"></script>
       
   </div> <!-- /.container -->
 </body>
