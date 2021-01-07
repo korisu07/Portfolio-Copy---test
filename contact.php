@@ -46,11 +46,11 @@
         echo '<script src="/js/fix_contact.js"></script>';
       }// その他の場合、Cookieを削除
       else if(isset($_COOKIE['contact'])){
-          // Cookieをすべて削除
-        setcookie("contact[name]", "", time()-300);
-        setcookie("contact[tel]", "", time()-300);
-        setcookie("contact[email]", "", time()-300);
-        setcookie("contact[content]", "", time()-300);
+
+        include dirname(__FILE__) . '/inc/contact_function.php';
+
+        // Cookieをすべて削除
+        clear_contanct_cookies();
       }
 
       // footer 読み込み
