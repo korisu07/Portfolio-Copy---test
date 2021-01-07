@@ -419,7 +419,7 @@ input, textarea{
   /* font */
   font-family: Arial, sans-serif;
   font-size: 80%;
-  line-height: 0.8rem;
+  line-height: 1rem;
   /* border */
   border-radius: 3px;
   border:1px solid rgb(118, 118, 118);
