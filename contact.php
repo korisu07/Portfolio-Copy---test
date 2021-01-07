@@ -33,7 +33,7 @@
           </p>
           <p>
             <label>お問い合わせ内容<span class="form_req">必須</span></label>
-            <textarea name="content" placeholder="具体的な内容をご入力ください。" required></textarea>
+            <textarea name="content" placeholder="具体的な内容をご入力ください。(1000文字以内)" maxlength="1000" required></textarea>
           </p>
           <p>
             <input type="submit" value="送信">
