@@ -1,4 +1,6 @@
 <?php 
+  include dirname(__FILE__) . '/inc/contact_function.php';
+
   if( isset($_POST['name']) ){
 
     // 確認画面にリダイレクト
@@ -6,13 +8,8 @@
 
     // それぞれの項目をCookieに登録
     // 有効期限は10分
-    setcookie("contact[name]", (string) $_POST['name'], time()+600);
 
-    setcookie("contact[email]", (string) $_POST['email'], time()+600);
-
-    setcookie("contact[tel]", (string) $_POST['tel'], time()+600);
-
-    setcookie("contact[content]", (string) $_POST['content'], time()+600);
+    set_contanct_cookies($_POST['name'], $_POST['tel'], $_POST['email'], $_POST['content']);
 
   }else{
     // 万が一、POSTメソッドがなかった場合、お問い合わせページに戻る
