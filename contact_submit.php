@@ -9,7 +9,7 @@
     // それぞれの項目をCookieに登録
     // 有効期限は10分
 
-    set_contanct_cookies($_POST['name'], $_POST['tel'], $_POST['email'], $_POST['content']);
+    set_contanct_cookies($_POST['name'], $_POST['company'], $_POST['tel'], $_POST['email'], $_POST['content']);
 
   }else{
     // 万が一、POSTメソッドがなかった場合、お問い合わせページに戻る
