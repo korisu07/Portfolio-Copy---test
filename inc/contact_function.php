@@ -1,7 +1,5 @@
 <?php
 
-  include dirname(__FILE__) . '/hide_func.php';
-
   // お問い合わせの内容を一時的にCookieに保存
   // デフォルトの有効期限は10分
   function set_contanct_cookies($name, $company ,$tel, $email, $content, $time = 600){
@@ -23,6 +21,9 @@
 
   // お問い合わせの内容を実際にメールで送る処理
   function contact_mail_send($send_name, $send_company, $send_tell, $send_email, $send_message){
+
+    include dirname(__FILE__) . '/hide_mail_send_func.php';
+
     mb_language("Japanese");
     mb_internal_encoding("UTF-8");
 
@@ -34,7 +35,6 @@
       $send_tell = '未入力';
     }
 
-    $to = $server_email;
     $subject = 'Y.K.Portfolioへのお問い合わせが届きました。';
 
     $message =  '■送信者：' . $send_name . PHP_EOL . PHP_EOL;
@@ -45,5 +45,5 @@
 
     $headers = 'From: Y.K.Portfolio';
 
-    mb_send_mail($to, $subject, $message, $headers); 
+    mb_send_mail($server_email, $subject, $message, $headers); 
   }
