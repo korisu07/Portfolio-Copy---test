@@ -28,6 +28,19 @@
             </tr>
 
             <tr>
+              <th>会社名(任意)：</th>
+                <td>
+                  <?php 
+                    if( !isset($_COOKIE['contact']['company']) || $_COOKIE['contact']['company'] === ''){
+                      echo '未入力です。';
+                    }else{
+                      echo $_COOKIE['contact']['company']; ;
+                    } 
+                  ?>
+                </td>
+            </tr>
+
+            <tr>
               <th>電話番号(任意)：</th>
               <td>
                 <?php 
