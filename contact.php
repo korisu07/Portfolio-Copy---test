@@ -17,19 +17,23 @@
         <form action="./contact_submit.php" method="post">
           <p>
             <label>お名前<span class="form_req">必須</span></label>
-            <input type="text" name="name" placeholder="全角で入力してください" required>
+            <input type="text" name="name" placeholder="必ずご入力ください。" required>
+          </p>
+          <p>
+            <label>会社名<span>任意</span></label>
+            <input type="text" name="company" placeholder="ご入力は任意です。">
           </p>
           <p>
             <label>電話番号<span>任意</span></label>
-            <input type="tel" name="tel" placeholder="ハイフンなしで入力してください">
+            <input type="tel" name="tel" placeholder="ハイフンなしでご入力ください。">
           </p>
           <p>
             <label>メールアドレス<span class="form_req">必須</span></label>
-            <input type="email" name="email" placeholder="半角英数字で入力してください" required>
+            <input type="email" name="email" placeholder="半角英数字でご入力ください。" required>
           </p>
           <p>
             <label>お問い合わせ内容<span class="form_req">必須</span></label>
-            <textarea name="content" placeholder="具体的な内容を入力してください。" required></textarea>
+            <textarea name="content" placeholder="具体的な内容をご入力ください。" required></textarea>
           </p>
           <p>
             <input type="submit" value="送信">
