@@ -13,7 +13,9 @@
       // メールの送信処理
       try{
 
-        contact_mail_send();
+        $cookie_contact = $_COOKIE['contact'];
+
+        contact_mail_send($cookie_contact['name'], $cookie_contact['company'],$cookie_contact['tel'], $cookie_contact['email'], $cookie_contact['content']);
 
         $result_head = '送信が完了しました。';
         $result_message = 'ありがとうございました。';
