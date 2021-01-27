@@ -19,6 +19,7 @@ small_menus.filter( (menu_of_sub) =>{
 toggle_main_menu.filter((link)=>{
   link.addEventListener('click', function (){
 
+    // 押したリンクの次にある要素を開閉する
     const 
       next_box = link.nextElementSibling;
 
@@ -34,6 +35,7 @@ toggle_main_menu.filter((link)=>{
 toggle_small_menus.filter((link)=>{
   link.addEventListener('click', function (){
 
+    // 押したリンクの次にある要素を開閉する
     const 
       next_box = link.nextElementSibling;
 
