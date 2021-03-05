@@ -12,7 +12,7 @@
 
       <section>
         <h2>Works</h2>
-        <h3 id="web">《チャットルーム》</h3>
+        <h3 id="web">《チャットアプリ》</h3>
         <div class="section-box">
 
         <div class="mb20">
@@ -22,20 +22,20 @@
 
         <div class="preview-box">
           <div class="preview-img">
-            <img src="/img/works/chat_preview.jpg" alt="チャットルームのプレビュー">
+            <img src="/img/works/chat_preview.jpg" alt="チャットアプリのプレビュー">
           </div>
           <div class="preview-text">
-            <p class="mb20">制作期間：約１ヶ月</p>
+            <p>制作期間：約１ヶ月</p>
+            <p class="mb20">設計の見直し・改修期間：約１ヶ月 （勉強期間を含む）</p>
+            <p>合計作業期間：約２ヶ月</p>
             
-            <p>PHP + SQLを使い、簡易的なチャットルームを作ってみました。</p>
+            <p>PHP + XAMPP（MySQL, Apache）を使い、簡易的なチャットアプリを作りました。</p>
             <p class="mb20">セッション変数を使って、擬似的に入退室のような処理が行われます。</p>
 
-            <p >また、BOTや荒らし等の対策もしました。</p>
-            <p>禁止ワード設定や、連投対策を実装しています。</p>
-            <p class="mb20">F5を連打しすぎると、アクセス制限がかかる仕組みも作っています。</p>
+            <p class="mb20">また、禁止ワードの投稿をストップさせる設定や連投対策を実装しています。</p>
 
             <p><a href="https://github.com/korisu07/PHP-Chat"><b>GitHubのソースコードはこちら</b></a></p>
-            <p>（一部、対策用のコードは非公開です。）</p>
+            <p>（一部、接続情報などのコードは非公開です。）</p>
             
           </div>
         </div> <!-- /.preview-box -->
