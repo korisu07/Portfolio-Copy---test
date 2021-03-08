@@ -39,3 +39,18 @@ function display_to_none(display_box){
   display_box.style.height = '0px';
   display_box.style.display = 'none';
 }
+
+
+// スクロールバーがない場合、スクロールバーぶんの横幅を補完
+function notExistScroll(){
+  // スクロールバーが存在しない場合に発動
+  if(	window.innerWidth == document.documentElement.clientWidth ){
+    // bodyタグ内にpadding-rightを補完
+    document.querySelector('body').style.paddingRight = '17px';
+  } else { // スクロールがある場合
+    // bodyタグの余白を削除
+    document.querySelector('body').style.paddingRight = '';
+  }
+}
+
+notExistScroll();
