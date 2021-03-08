@@ -13,6 +13,8 @@
     ?>
 </footer>
 
+<script src="/js/function.js"></script>
+
 <script src="js/fadeIn.js"></script>
 
 <script src="./js/side_menu_open.js"></script>

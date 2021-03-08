@@ -13,5 +13,3 @@
 <link href="/css/menu.css" rel="stylesheet">
 
 <link href="/css/modal_img.css" rel="stylesheet">
-
-<script src="/js/function.js"></script>
