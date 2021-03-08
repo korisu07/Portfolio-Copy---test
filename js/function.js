@@ -46,9 +46,6 @@ function notExistScroll(){
   // bodyタグを読み込み
   const body = document.querySelector('body');
 
-  console.log( window.innerWidth );
-  console.log( document.body.offsetWidth );
-
   // スクロールバーが存在しない場合に発動
   if(	window.innerWidth == document.body.clientWidth ){
     // bodyタグ内にpadding-rightを補完
