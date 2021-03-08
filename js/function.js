@@ -43,13 +43,19 @@ function display_to_none(display_box){
 
 // スクロールバーがない場合、スクロールバーぶんの横幅を補完
 function notExistScroll(){
+  // bodyタグを読み込み
+  const body = document.querySelector('body');
+
+  console.log( window.innerWidth );
+  console.log( document.body.offsetWidth );
+
   // スクロールバーが存在しない場合に発動
-  if(	window.innerWidth == document.documentElement.clientWidth ){
+  if(	window.innerWidth == document.body.clientWidth ){
     // bodyタグ内にpadding-rightを補完
-    document.querySelector('body').style.paddingRight = '17px';
-  } else { // スクロールがある場合
+    body.style.paddingRight = '17px';
+  } else if ( body.style.paddingRight = '17px' ) { // スクロールがあり、セットされていた場合
     // bodyタグの余白を削除
-    document.querySelector('body').style.paddingRight = '';
+    body.style.paddingRight = '';
   }
 }
 
