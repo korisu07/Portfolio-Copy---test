@@ -1,6 +1,6 @@
 const
   toggle_main_menu = Array.from(document.getElementsByClassName('js-menu-head')),
-  toggle_small_menus = Array.from(document.getElementsByClassName('js-toggle_small_menu')),
+  toggle_small_menus = Array.from(document.getElementsByClassName('js-toggle-small-menu')),
 
   main_menus = Array.from(document.getElementsByClassName('js-menu-wrapper')),
   small_menus = Array.from(document.getElementsByClassName('js-menu-content'));
