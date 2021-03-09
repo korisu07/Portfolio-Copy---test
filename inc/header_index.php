@@ -4,10 +4,10 @@
 	</h1>
 
   <!-- ハンバーガーメニューのボタン用 -->
-  <input id="menu-checkbox" type="checkbox">
-  <label for="menu-checkbox" class="menu-open"></label>
-  <label for="menu-checkbox" class="menu-back"></label>
+  <div id='js-toggle-nav' class="open-nav"></div>
+  <div id="nav-back"></div>
   <!-- ハンバーガーメニューのボタン用 -->
+
 
   <nav>
     <ul>
