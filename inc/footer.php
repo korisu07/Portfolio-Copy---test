@@ -14,6 +14,7 @@
 </footer>
 
 <script src="/js/function.js"></script>
+<script src="/js/nav.js"></script>
 
 <script src="/js/fadeIn.js"></script>
 
