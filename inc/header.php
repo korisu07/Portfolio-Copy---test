@@ -2,9 +2,8 @@
   <h1><a href="/index.php">Y.K.Portfolio</a></h1>
 
   <!-- ハンバーガーメニューのボタン用 -->
-  <input id="menu-checkbox" type="checkbox">
-  <label for="menu-checkbox" class="menu-open"></label>
-  <label for="menu-checkbox" class="menu-back"></label>
+  <div id='js-toggle-nav' class="open-nav"></div>
+  <div id="nav-back"></div>
   <!-- ハンバーガーメニューのボタン用 -->
 
   <nav>
@@ -17,17 +16,17 @@
           <div id="works" class="js-menu-head works-link">Works</div>
           <div class="js-menu-wrapper">
             <a href="/works.php">作品一覧</a>
-            <div class="js-toggle_small_menu">APP</div>
+            <div class="js-toggle-small-menu">APP</div>
             <div class="js-menu-content">
               <span><a href="/chat.php">チャット</a></span>
               <span><a href="/memo.php">Memo.app</a></span>
             </div>
-            <div class="js-toggle_small_menu">WEB</div>
+            <div class="js-toggle-small-menu">WEB</div>
             <div class="js-menu-content">
               <span><a href="/oyasai.php">おやさい.net</a></span>
               <span><a href="/cafe-cookies.php">Cafe*Cookies</a></span>
             </div>
-            <div class="js-toggle_small_menu">DTP</div>
+            <div class="js-toggle-small-menu">DTP</div>
             <div class="js-menu-content">
               <span><a href="/kumayoke.php">チラシ</a></span>
               <span><a href="/work_postcard.php">ハガキ</a></span>
