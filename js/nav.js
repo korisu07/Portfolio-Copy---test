@@ -7,7 +7,7 @@
 const 
 toggle = document.getElementById('js-toggle-nav'),
 nav = document.querySelector('header nav'),
-mainBgImg = document.querySelector('.main-bg-img');
+main_bg_img = document.querySelector('.main-bg-img');
 
 toggle.addEventListener('click', function(){
   // 開くとき
@@ -20,7 +20,7 @@ toggle.addEventListener('click', function(){
     toggleOpenNav();
 
     // もしも親タグに補完用のpadding-rightが入っていた場合、toggleのスタイルを変更する
-    if ( mainBgImg.style.paddingRight = '17px' ) {
+    if ( main_bg_img.style.paddingRight = '17px' ) {
       // margin-rightを補正分を引いた30pxに
       toggle.style.marginRight = '30px';
     } //end if.
@@ -44,7 +44,7 @@ const
   // bodyタグを読み込み
   body = document.querySelector('body'),
   // nav開閉時にのみ表示される半透明の背景を読み込み
-  navBackground = document.getElementById('nav-back');
+  nav_background = document.getElementById('nav-back');
 
 
 // nav要素を表示
@@ -62,10 +62,10 @@ function toggleOpenNav(){
 //////////////////////////////////////
 
   // 半透明の背景を表示
-  navBackground.style.display = 'block';
+  nav_background.style.display = 'block';
   // フェードインの処理
-  opacity_0_to_100(navBackground, 100);
-  navBackground.style.opacity = '1';
+  opacity_0_to_100(nav_background, 100);
+  nav_background.style.opacity = '1';
 
 //////////////////////////////////////
 
@@ -97,10 +97,10 @@ function toggleCloseNav(){
 //////////////////////////////////////
 
   // 半透明の背景をフェードアウト
-  opacity_100_to_0(navBackground, 100);
+  opacity_100_to_0(nav_background, 100);
   // 半透明の背景を非表示に
-  navBackground.style.opacity = '';
-  navBackground.style.display = '';
+  nav_background.style.opacity = '';
+  nav_background.style.display = '';
 
 //////////////////////////////////////
 
