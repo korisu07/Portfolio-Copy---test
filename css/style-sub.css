@@ -1,6 +1,6 @@
 /* ハンバーガーメニュー調整 */
-/* 共通設定　940px以下で発動 */
-@media(max-width:960px){
+/* 共通設定　1000px以下で発動 */
+@media(max-width:1000px){
   header{
     width:100%;
   }
