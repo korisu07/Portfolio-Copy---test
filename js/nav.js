@@ -63,6 +63,7 @@ const
   // nav開閉時にのみ表示される半透明の背景を読み込み
   nav_background = document.getElementById('nav-back'),
   section = document.querySelector('section');
+  /* end const */
 
 let
   // navメニューのtoggleのスタイルを読み込み
@@ -71,10 +72,19 @@ let
   newToggleMargin = newToggleMargin.getPropertyValue('margin-right').replace('px', '');
   // もともとついているpadding-rightと、スクロールバーぶんの数値を加算
   newToggleMargin = Number( newToggleMargin ) + numScrollBar;
-  /* end const */
+  /* end let */
 
 // nav要素を表示
 function toggleOpenNav(){
+
+  // もともとのページにスクロールがある場合
+  if ( boolExistScrollBar() === 'true' ){
+    // navを固定した関係でスクロールバーが消えてしまうため、
+    // スクロールバーがなくなった余白を補完するpadding-rightを設定
+    section.style.paddingRight = numScrollBar + 'px';
+    //toggleのpaddingRightを変更
+    toggle.style.marginRight = newToggleMargin + 'px';
+  }
 
   const
   // スクロールしたぶんの数値を取得
@@ -98,20 +108,17 @@ function toggleOpenNav(){
 
   // nav要素のrightを移動させることで表示する
   nav.style.right = '0';
-  //toggleのpaddingRightを変更
-  toggle.style.marginRight = newToggleMargin + 'px';
-
-  // 補完用のpadding-rightが設定されていない場合
-  // ＝ もともとのページにスクロールがある場合
-  if ( main_bg_img.style.paddingRight !== numScrollBar + 'px' ){
-    // スクロールバーがなくなった余白を補完するpadding-rightを設定
-    section.style.paddingRight = numScrollBar + 'px';
-  }
 } //end func, toggleOpenNav.
 
 
 // nav要素を非表示
 function toggleCloseNav(){
+
+  // 補完用のpaddingがクリックによって設定されている場合
+  if(typeof section.style.paddingRight !== 'null' ){
+    // padding-rightをリセット
+    section.style.paddingRight = '';
+  }
 
   // スクロール固定のためのpositionをリセット
   body.style.position = '';
@@ -143,10 +150,4 @@ function toggleCloseNav(){
   nav.style.right = '';
   // toggleの補完用padding-rightをリセット
   toggle.style.marginRight = '';
-
-  // 補完用のpaddingがクリックによって設定されている場合
-  if( section.style.paddingRight === numScrollBar + 'px' ){
-    // padding-rightをリセット
-    section.style.paddingRight = '';
-  }
 } //end func, toggleCloseNav.
