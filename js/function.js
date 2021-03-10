@@ -40,26 +40,60 @@ function display_to_none(display_box){
   display_box.style.display = 'none';
 }
 
+////////////////////////////////////////////
+
+// スクロールバーを含む画面幅と、スクロールバーを含まない画面幅を比べて、
+// スクロールが発生しているかをチェックする関数
+// trueならスクロールあり 
+function boolExistScrollBar(){
+  if( window.innerWidth !== document.body.clientWidth ){
+    // スクロールありと判定
+    return true;
+  } else {
+    // スクロールなしと判定
+    return false;
+  }
+} //end func boolExistScrollBar.
+
+////////////////////////////////////////////
+// 以下、関数を発動させるゾーン
+
+// 背景を設定しているタグを読み込み
+const
+  main_bg_img = document.querySelector('.main-bg-img'),
+  // スクロールバーの幅
+  // 後々、Chrome以外にも対応するかもしれないのでここで定義
+  numScrollBar = 17;
 
 // スクロールバーがない場合、スクロールバーぶんの横幅を補完
-function notExistScroll(){
-  // bodyタグを読み込み
-  const body = document.querySelector('.main-bg-img');
+function setPaddingRight( bool ){
+  // switch
+  loopsTop: switch ( bool ){
+    // スクロールがありの場合
+    case true:
+      // 背景設定タグ内にpadding-rightを補完
+      main_bg_img.style.paddingRight = numScrollBar;
+      //処理が完了したらラベルの位置に戻る
+      break loopsTop;
 
-  // スクロールバーが存在しない場合に発動
-  if(	window.innerWidth == document.body.clientWidth ){
-    // bodyタグ内にpadding-rightを補完
-    body.style.paddingRight = '17px';
-  }
-  // スクロールがあり、セットされていた場合
-  else if ( body.style.paddingRight = '17px' ) {
-    // bodyタグの余白を削除
-    body.style.paddingRight = '';
-  } //end if.
+    // スクロールがなしの場合
+    case false:
+      // padding-rigthが動的に入っている場合
+      if( main_bg_img.style.paddingRight = numScrollBar ){
+        // 背景設定タグの余白を削除
+        main_bg_img.style.paddingRight = '';
+      }
+
+      //処理が完了したらラベルの位置に戻る
+      break loopsTop;
+
+  } //end switch.
 }
 
 // 画面幅が768pxよりも上の場合に、発動
 if( document.body.clientWidth > 768){
   // スクロールバー分の横幅を補完
-  notExistScroll();
+  setPaddingRight( boolExistScrollBar() );
 } //end if.
+
+
