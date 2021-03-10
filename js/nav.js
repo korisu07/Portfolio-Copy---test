@@ -11,30 +11,47 @@ main_bg_img = document.querySelector('.main-bg-img');
 
 toggle.addEventListener('click', function(){
   // 開くとき
-  if(toggle.className === 'open-nav'){
-    // クラスをリセット
-    toggle.className = '';
-    // クラスを切り替え
-    toggle.className = 'close-nav';
-    // navを表示する処理
-    toggleOpenNav();
+  switch (true){
+    // navを開く時
+    case toggle.className === 'open-nav':
+      // toggleのクラスをリセット
+      toggle.className = '';
+      // クラスを切り替え
+      toggle.className = 'close-nav';
+      // navを表示する処理
+      toggleOpenNav();
 
-    // もしも親タグに補完用のpadding-rightが入っていた場合、toggleのスタイルを変更する
-    if ( main_bg_img.style.paddingRight = '17px' ) {
-      // margin-rightを補正分を引いた30pxに
-      toggle.style.marginRight = '30px';
-    } //end if.
-  } 
-  // 閉じる時
-  else if(toggle.className === 'close-nav'){
-    // クラスをリセット
-    toggle.className = '';
-    // クラスを切り替え
-    toggle.className = 'open-nav';
-    // navを非表示にする処理
-    toggleCloseNav();
-  }
-});
+      // もしも親タグに補完用のpadding-rightが入っていた場合、toggleのスタイルを変更する
+      if ( main_bg_img.style.paddingRight = '17px' ) {
+        // 親タグのpadding-rightをリセット
+        main_bg_img.style.paddingRight = '';
+        // margin-rightを補正分を足した30pxに
+        toggle.style.marginRight = '47px';
+      } //end if.
+        break;
+
+    //////////////////////////////////////////////////////////
+    // navを閉じる時
+    case toggle.className === 'close-nav':
+      // toggleのクラスをリセット
+      toggle.className = '';
+      // クラスを切り替え
+      toggle.className = 'open-nav';
+      // navを非表示にする処理
+      toggleCloseNav();
+
+      //親タグのpadding-rightの補完をもとに戻す処理
+      if ( toggle.style.marginRight = '47px' ) {
+        // メニュー開閉toggleのpadding-rightをリセット
+        toggle.style.marginRight = '';
+        // 親タグのpadding-rightを再度セット
+        main_bg_img.style.paddingRight = '17px';
+      } //end if.
+      break;
+
+  } //end switch.
+}); //end toggle.addEventListener - click.
+
 
 /////////////////////////////////////////////////
 //                 ここから関数                 //
