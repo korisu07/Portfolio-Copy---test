@@ -16,15 +16,17 @@ $('.slider').slick({
 
 // 各要素を読み込み
 const
+  // メニューのtoggleを読み込み
   menu_checkbox = document.getElementById('nav_action'),
-  menu_div = document.getElementsByClassName('nav_drawer'),
-
-  //nav_drawerを配列化。
-  //nav_drawerは一つしかないので、配列の１つ目を処理
-  nav_drawer = Array.from(menu_div)[0];
-  
   // 画面幅を取得
-  const window_width = window.innerWidth;
+  window_width = window.innerWidth;
+
+let
+  //nav_drawerを配列化。
+  nav_drawer = document.getElementsByClassName('nav_drawer');
+  //nav_drawerは１つしかないので、配列の１つ目を処理
+  nav_drawer = Array.from( nav_drawer )[0];
+
 
 menu_checkbox.addEventListener('change', function(){
   //チェックボックスがONになったら発動
