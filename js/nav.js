@@ -1,35 +1,54 @@
 'use strict';
 
-/////////////////////////////////////////////////
-//             ここからクリック処理              //
-/////////////////////////////////////////////////
-
+/** グローバルスコープ */
 const 
+  // body タグ
+  body = document.querySelector('body'),
+
+  // ナビゲーション
+  nav = document.querySelector('header nav'),
+  // ナビゲーションの開閉ボタン
   toggle = document.getElementById('js-toggle-nav'),
-  nav = document.querySelector('header nav');
+
+  // nav開閉時にのみ表示される半透明の背景
+  nav_overlay = document.getElementById('nav-back');
+  /* end const */
+
+let 
+  // メイン背景が設定されている タグ
+  mainBgImg = document.getElementsByClassName('main-bg-img');
+  // main-bg-imgタグは１つしかないので、配列の１つ目を取得
+  mainBgImg = Array.from( mainBgImg )[0];
+  /* end let */
+
+
+/** ここからクリック時に実行する処理 */
 
 toggle.addEventListener('click', function(){
+  const
+    scrollBarSize = calcScrollBar(),
+    toggleMR = calcToggleMarginR( scrollBarSize );
   // 開くとき
   switch (true){
     // navを開く時
-    case toggle.className === 'open-nav':
+    case this.className === 'open-nav':
       // toggleのクラスをリセット
-      toggle.className = '';
+      this.className = '';
       // クラスを切り替え
-      toggle.className = 'close-nav';
+      this.className = 'close-nav';
       // navを表示する処理
-      toggleOpenNav();
+      toggleOpenNav( scrollBarSize, toggleMR );
 
       break;
 
-//////////////////////////////////////////////////////////
+///////////////////////////
 
     // navを閉じる時
-    case toggle.className === 'close-nav':
+    case this.className === 'close-nav':
       // toggleのクラスをリセット
-      toggle.className = '';
+      this.className = '';
       // クラスを切り替え
-      toggle.className = 'open-nav';
+      this.className = 'open-nav';
       // navを非表示にする処理
       toggleCloseNav();
 
@@ -53,61 +72,92 @@ overlay.addEventListener('click', function(){
 
 });
 
-/////////////////////////////////////////////////
-//                 ここから関数                 //
-/////////////////////////////////////////////////
+/** ここから関数 */
 
-const 
-  // bodyタグを読み込み
-  body = document.querySelector('body'),
-  // nav開閉時にのみ表示される半透明の背景を読み込み
-  nav_background = document.getElementById('nav-back'),
-  section = document.querySelector('section');
-  /* end const */
-
-let
+function calcToggleMarginR( scrollBarWidth ){
+  let
   // navメニューのtoggleのスタイルを読み込み
-  newToggleMargin = window.getComputedStyle(toggle);
+  toggleMarginR = window.getComputedStyle( toggle );
   // margin-rightの数値だけを取得
-  newToggleMargin = newToggleMargin.getPropertyValue('margin-right').replace('px', '');
+  toggleMarginR = toggleMarginR.getPropertyValue('margin-right').replace('px', '');
   // もともとついているpadding-rightと、スクロールバーぶんの数値を加算
-  newToggleMargin = Number( newToggleMargin ) + numScrollBar;
+  toggleMarginR = Number( toggleMarginR ) + scrollBarWidth;
   /* end let */
 
+  return toggleMarginR;
+} //end func, calcToggleMarginR
+
+///////////////////////////
+
+// スクロールバーの幅を計算する
+function calcScrollBar(){
+  const 
+  // ユーザーのアクセスしている端末がスマホかどうかを取得する
+    agent = window.navigator.userAgent.toLowerCase();
+  
+  // スマホやモバイルからのアクセスの場合
+  if(agent.indexOf('iphone') > -1 || 
+    agent.indexOf('ipod') > -1 || 
+    agent.indexOf('android') > -1 || 
+    agent.indexOf('mobile') > -1) {
+
+  // スクロールバーの横幅の補正を0と設定する
+  return 0;
+
+  }else{
+  // PCからのアクセスの場合、スクロールバーの横幅の値を計算する
+  let
+    // スクロールバーを含む表示域 - 含まない表示域
+    calcWidth = Number( window.innerWidth ) - Number( document.body.clientWidth );
+    // 計算結果を四捨五入する
+    // calcWidth = Math.round( width, 1 );
+
+  // 計算した値をスクロールバーの横幅として設定する
+  return calcWidth;
+
+  } //end if, mobile.
+} //end func, checkScrollSize.
+
+///////////////////////////
+
+
 // nav要素を表示
-function toggleOpenNav(){
+function toggleOpenNav( scrollBarSize, toggleMarginR ){
 
   // もともとのページにスクロールがある場合
-  if ( boolExistScrollBar() === 'true' ){
+  if ( scrollBarSize > 0 ){
     // navを固定した関係でスクロールバーが消えてしまうため、
     // スクロールバーがなくなった余白を補完するpadding-rightを設定
-    section.style.paddingRight = numScrollBar + 'px';
+    mainBgImg.style.paddingRight = scrollBarSize + 'px';
     //toggleのpaddingRightを変更
-    toggle.style.marginRight = newToggleMargin + 'px';
+    toggle.style.marginRight = toggleMarginR + 'px';
   }
+
+/////
 
   const
   // スクロールしたぶんの数値を取得
-  scrollBody = Number( window.pageYOffset );
+  scrolledLength = Number( window.pageYOffset );
   /* end const */
 
   // bodyタグのスタイルを変更し、スクロール位置を固定
   body.style.position = 'fixed';
   // topの位置をスクロール分だけ移動させることで、位置を維持
-  body.style.top = -(scrollBody) + 'px';
+  body.style.top = -( scrolledLength ) + 'px';
  
-//////////////////////////////////////
+/////
 
   // 半透明の背景を表示
-  nav_background.style.display = 'block';
+  nav_overlay.style.display = 'block';
   // フェードインの処理
-  opacity_0_to_100(nav_background, 100);
-  nav_background.style.opacity = '1';
+  opacity_0_to_100(nav_overlay, 100);
+  nav_overlay.style.opacity = '1';
 
-//////////////////////////////////////
+/////
 
   // nav要素のrightを移動させることで表示する
   nav.style.right = '0';
+
 } //end func, toggleOpenNav.
 
 
@@ -115,9 +165,9 @@ function toggleOpenNav(){
 function toggleCloseNav(){
 
   // 補完用のpaddingがクリックによって設定されている場合
-  if(typeof section.style.paddingRight !== 'null' ){
+  if( mainBgImg.style.paddingRight ){
     // padding-rightをリセット
-    section.style.paddingRight = '';
+    mainBgImg.style.paddingRight = '';
   }
 
   // スクロール固定のためのpositionをリセット
@@ -136,15 +186,15 @@ function toggleCloseNav(){
   // topの設定をリセット
   body.style.top = '';
 
-//////////////////////////////////////
+/////
 
   // 半透明の背景をフェードアウト
-  opacity_100_to_0(nav_background, 100);
+  opacity_100_to_0(nav_overlay, 100);
   // 半透明の背景を非表示に
-  nav_background.style.opacity = '';
-  nav_background.style.display = '';
+  nav_overlay.style.opacity = '';
+  nav_overlay.style.display = '';
 
-//////////////////////////////////////
+/////
 
   // nav要素のrightをもとに戻すことで非表示にする
   nav.style.right = '';
