@@ -46,8 +46,9 @@ menu_toggles.filter((toggle) => {
     case 'nav_open':
       // navを表示
       nav_drawer.style.right = '0';
+
+      nav_back.style.display = 'block';
       nav_back.style.right = '0';
-      console.log('open');
       // スクロールを無効化
       disableScroll();
       //処理が完了したらラベルの位置に戻る
@@ -56,8 +57,9 @@ menu_toggles.filter((toggle) => {
     case 'nav_close':
       // navを非表示
       nav_drawer.style.right = '';
+
+      nav_back.style.display = '';
       nav_back.style.right = '';
-      console.log('close');
       // スクロールを有効化
       enableScroll();
       //処理が完了したらラベルの位置に戻る
@@ -66,17 +68,29 @@ menu_toggles.filter((toggle) => {
   }, false);
 });
 
+nav_back.addEventListener('click', function(){
+  // navを非表示
+  nav_drawer.style.right = '';
+
+  nav_back.style.display = '';
+  nav_back.style.right = '';
+  // スクロールを有効化
+  enableScroll();
+}, false);
+
 
 // チェックがONの状態で、ウィンドウサイズに変更があった場合
 if(nav_drawer.style.right === '0'){
-  topFunction: switch(window_width < 1000){
+  switch(window_width < 1000){
+    // 変更された場合
     case true:
       // メニュー開閉時の背景と、メニュー上部を隠す処理
       document.querySelector('.nav_back').style.display = 'none';
       document.querySelector('.nav_drawer_top').style.display = 'none';
-      // 処理が完了したら、ラベルの位置に戻る
-      break topFunction;
-    default: break topFunction;
+      break;
+
+    default: 
+      break;
   }
 }
 
