@@ -1,10 +1,3 @@
-
-.header-top input[type="checkbox"]{
-  position: fixed;
-  right: -50%;
-}
-
-
 @media(max-width:1010px){
   header{
     height: 120px;
