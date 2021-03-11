@@ -89,38 +89,6 @@ function calcToggleMarginR( scrollBarWidth ){
 
 ///////////////////////////
 
-// スクロールバーの幅を計算する
-function calcScrollBar(){
-  const 
-  // ユーザーのアクセスしている端末がスマホかどうかを取得する
-    agent = window.navigator.userAgent.toLowerCase();
-  
-  // スマホやモバイルからのアクセスの場合
-  if(agent.indexOf('iphone') > -1 || 
-    agent.indexOf('ipod') > -1 || 
-    agent.indexOf('android') > -1 || 
-    agent.indexOf('mobile') > -1) {
-
-  // スクロールバーの横幅の補正を0と設定する
-  return 0;
-
-  }else{
-  // PCからのアクセスの場合、スクロールバーの横幅の値を計算する
-  let
-    // スクロールバーを含む表示域 - 含まない表示域
-    calcWidth = Number( window.innerWidth ) - Number( document.body.clientWidth );
-    // 計算結果を四捨五入する
-    // calcWidth = Math.round( width, 1 );
-
-  // 計算した値をスクロールバーの横幅として設定する
-  return calcWidth;
-
-  } //end if, mobile.
-} //end func, checkScrollSize.
-
-///////////////////////////
-
-
 // nav要素を表示
 function toggleOpenNav( scrollBarSize, toggleMarginR ){
 
@@ -128,7 +96,7 @@ function toggleOpenNav( scrollBarSize, toggleMarginR ){
   if ( scrollBarSize > 0 ){
     // navを固定した関係でスクロールバーが消えてしまうため、
     // スクロールバーがなくなった余白を補完するpadding-rightを設定
-    mainBgImg.style.paddingRight = scrollBarSize + 'px';
+    mainBgImg.style.marginRight = scrollBarSize + 'px';
     //toggleのpaddingRightを変更
     toggle.style.marginRight = toggleMarginR + 'px';
   }
@@ -165,9 +133,9 @@ function toggleOpenNav( scrollBarSize, toggleMarginR ){
 function toggleCloseNav(){
 
   // 補完用のpaddingがクリックによって設定されている場合
-  if( mainBgImg.style.paddingRight ){
+  if( mainBgImg.style.marginRight ){
     // padding-rightをリセット
-    mainBgImg.style.paddingRight = '';
+    mainBgImg.style.marginRight = '';
   }
 
   // スクロール固定のためのpositionをリセット
