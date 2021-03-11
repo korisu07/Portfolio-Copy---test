@@ -1,5 +1,3 @@
-
-
 ///////////////////////////////
 /** グローバルスコープ */
 
@@ -7,7 +5,15 @@
 // 各要素を読み込み
 const
   // 画面幅を取得
-  window_width = window.innerWidth;
+  window_width = window.innerWidth,
+
+  // スクロールを制御したい範囲を囲んだdivを取得
+  divControllScroll = document.getElementById('js-controll-scroll'),
+  
+  // #js-controll-scroll直下の .container を取得
+  container = document.querySelector('#js-controll-scroll .container'),
+  // footer を取得
+  footer = document.querySelector('footer');
 /** end const. */
 
 let
@@ -25,6 +31,7 @@ let
   menu_toggles = document.getElementsByClassName('nav_toggle');
   // toggleを配列化
   menu_toggles = Array.from( menu_toggles );
+
 /** end let. */
 
 ///////////////////////////////
@@ -41,6 +48,7 @@ menu_toggles.filter((toggle) => {
       toggleClassName = toggle.className.replace('nav_toggle','').replace(' ','');
     /* end const. */
 
+/////
     // クリックされたtoggleのクラス名によって条件を分岐
     switch( toggleClassName ){
     case 'nav_open':
@@ -49,6 +57,8 @@ menu_toggles.filter((toggle) => {
 
       nav_back.style.display = 'block';
       nav_back.style.right = '0';
+      // 消えたスクロールバーの分を補完
+      compensateScrollBar( calcScrollBar() );
       // スクロールを無効化
       disableScroll();
       //処理が完了したらラベルの位置に戻る
@@ -60,13 +70,17 @@ menu_toggles.filter((toggle) => {
 
       nav_back.style.display = '';
       nav_back.style.right = '';
+      // 補完したmargin-rightを削除
+      compensateScrollBar();
       // スクロールを有効化
       enableScroll();
       //処理が完了したらラベルの位置に戻る
       break;
     }
   }, false);
-});
+}); //end forEach.
+
+/////
 
 nav_back.addEventListener('click', function(){
   // navを非表示
@@ -94,10 +108,7 @@ if(nav_drawer.style.right === '0'){
   }
 }
 
-const 
-  // スクロールを制御したい範囲を囲んだdivを取得
-  divControllScroll = document.getElementById('js-controll-scroll');
-
+// ナビゲーションを開いているときに、メニュー以外のスクロールを一時的に無効にする関数
 function disableScroll(){
   const
   // スクロールしたぶんの数値を取得
@@ -108,11 +119,9 @@ function disableScroll(){
   divControllScroll.style.width = '100%';
   // topの位置をスクロール分だけ移動させることで、位置を維持
   divControllScroll.style.top = -(scrollBody) + 'px';
-
-  // スクロールバーが消えた分のpadding-rightを補完
-  divControllScroll.style.paddingRight = '17px';
 }
 
+// スクロールを可能な状態に戻す関数
 function enableScroll(){
 
   // スクロール固定のためのpositionをリセット
@@ -131,6 +140,23 @@ function enableScroll(){
   
   // topの設定をリセット
   divControllScroll.style.top = '';
-  // スクロールバー補完用のpadding-rightをリセット
-  divControllScroll.style.paddingRight = '';
+}
+
+// スクロールバーが消えたときに、その幅の分だけmargin-rightで補完する関数
+function compensateScrollBar( scrollBarWidth ){
+  // 既にmargin-rightにScroll Bar分の数値がセットされている場合
+  if( container.style.marginRight ){
+
+    // スクロールバー補完用のmargin-rightをリセット
+    container.style.marginRight = '';
+    footer.style.marginRight = '';
+    
+  } // セットされておらず、スクロールバーが存在する場合
+  else if( scrollBarWidth > 0 ){
+
+    // スクロールバーが消えた分のpadding-rightを補完
+    container.style.marginRight = scrollBarWidth + 'px';
+    footer.style.marginRight = scrollBarWidth + 'px';
+
+  } //end if.
 }
