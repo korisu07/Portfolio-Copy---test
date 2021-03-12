@@ -14,11 +14,12 @@ function readJSfile( filepath ){
  */
 
 const JS_files = [
-  // 相対パス
-  'js/jquery-3.4.1.min.js',
-  'slick/slick.min.js',
-  'js/slider.js',
-  'js/nav.js'
+  // 絶対パス
+  '/js/function.js',
+  '/web/ecsite/js/jquery-3.4.1.min.js',
+  '/web/ecsite/slick/slick.min.js',
+  '/web/ecsite/js/slider.js',
+  '/web/ecsite/js/nav.js'
 ];
 
 JS_files.forEach((file) => {
