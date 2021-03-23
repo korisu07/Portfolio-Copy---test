@@ -21,8 +21,10 @@ let
   mainBgImg = Array.from( mainBgImg )[0];
   /* end let */
 
+/** ここまで　グローバルスコープ */
 
-/** ここからクリック時に実行する処理 */
+
+/** ここから　クリック時に実行する処理 */
 
 toggle.addEventListener('click', function(){
   const
@@ -57,6 +59,7 @@ toggle.addEventListener('click', function(){
   } //end switch.
 }); //end toggle.addEventListener - click.
 
+
 const
   // ナビゲーションのoverlayを読み込み
   overlay = document.getElementById('nav-back');
@@ -71,8 +74,17 @@ overlay.addEventListener('click', function(){
   toggleCloseNav();
 
 });
+/** ここまで　クリック時の処理 */
 
-/** ここから関数 */
+/** ここから　関数 */
+
+/**
+ * toggleに設定されたmargin-rightの値を取得し、
+ * その値とスクロールバーの数値を足した値を計算する
+ * 
+ * ★この計算結果は、スクロール固定をした際にスクロールバーが消えるので、
+ * 　消えた分の横幅を補完するために使われます。
+ */
 
 function calcToggleMarginR( scrollBarWidth ){
   let
@@ -116,10 +128,7 @@ function toggleOpenNav( scrollBarSize, toggleMarginR ){
 /////
 
   // 半透明の背景を表示
-  nav_overlay.style.display = 'block';
-  // フェードインの処理
-  opacity_0_to_100(nav_overlay, 100);
-  nav_overlay.style.opacity = '1';
+  showOverlay();
 
 /////
 
@@ -156,11 +165,8 @@ function toggleCloseNav(){
 
 /////
 
-  // 半透明の背景をフェードアウト
-  opacity_100_to_0(nav_overlay, 100);
   // 半透明の背景を非表示に
-  nav_overlay.style.opacity = '';
-  nav_overlay.style.display = '';
+  hideOverlay();
 
 /////
 
@@ -169,3 +175,30 @@ function toggleCloseNav(){
   // toggleの補完用padding-rightをリセット
   toggle.style.marginRight = '';
 } //end func, toggleCloseNav.
+
+
+// 半透明の背景を表示する処理
+function showOverlay(){
+  
+  // 半透明の背景を表示
+  nav_overlay.style.display = 'block';
+  // フェードインの処理
+  opacity_0_to_100(nav_overlay, 100);
+  nav_overlay.style.opacity = '1';
+
+} //end func, showOverlay.
+
+
+// 半透明の背景を非表示にする処理
+function hideOverlay(){
+
+  // 半透明の背景をフェードアウト
+  opacity_100_to_0(nav_overlay, 100);
+  // 半透明の背景を非表示に
+  nav_overlay.style.opacity = '';
+  nav_overlay.style.display = '';
+
+} //end func, hideOverlay.
+
+
+/** ここまで　関数 */
