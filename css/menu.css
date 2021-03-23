@@ -12,6 +12,7 @@
 .open-nav, .close-nav{
   display: none;
 }
+/* メニューの開閉ボタン */
 .open-nav{
   background-image: url('/inc/img/menu_open_black.png');
   background-size:contain;
@@ -20,6 +21,7 @@
   background-image: url('/inc/img/menu_close_black.png');
   background-size:contain;
 }
+/* メニューの背景 */
 #nav-back{
   z-index: 20;
   display: none;
