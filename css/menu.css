@@ -35,6 +35,9 @@
   opacity: 0;
   transition: opacity 0.3s;
 }
+nav{
+  transition: all 0.2s;
+}
 @media(max-width: 1000px){
   nav{
     z-index: 90;
@@ -43,7 +46,6 @@
     right: -50%;
     width: 50%;
     height: 120%;
-    transition: right 0.2s;
     background-color: #fff;
   }
   #js-toggle-nav{
@@ -52,6 +54,12 @@
     position: fixed;
     top: 0;
     right: 0;
+  }
+}
+@media(max-width: 600px){
+  header nav{
+    right: -65%;
+    width: 65%;
   }
 }
 @media(max-width: 425px){
