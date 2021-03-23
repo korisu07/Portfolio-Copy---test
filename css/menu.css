@@ -29,11 +29,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 120%;
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
   transition: opacity 0.3s;
+  /* 画面幅が 1000px を超えたときに、背景を非表示にさせるため */
+  /* デフォルトの幅と高さを0に設定しています。 */
+  width: 0;
+  height: 0;
 }
 nav{
   transition: all 0.2s;
@@ -47,6 +49,10 @@ nav{
     width: 50%;
     height: 120%;
     background-color: #fff;
+  }
+  #nav-back{
+    width: 100%;
+    height: 120%;
   }
   #js-toggle-nav{
     z-index: 99;
