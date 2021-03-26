@@ -4,10 +4,10 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="ポートフォリオ（作品集）です。">
-<meta name="keywords" content="Portfolio,ポートフォリオ,Web制作,自主制作,個人制作">
+<meta name="description" content="ポートフォリオのお問い合わせに失敗しました。">
+<meta name="keywords" content="Portfolio,ポートフォリオ,Web制作,自主制作,個人制作,お問い合わせ">
 
-<title>Y.K.Portfolio</title>
+<title>送信に失敗しました - Y.K.Portfolio</title>
 
 <?php include './inc/head.php'; ?>
 
@@ -36,7 +36,7 @@
 
       }else{
         // 万が一、POSTメソッドがなかった場合、お問い合わせページに戻る
-        echo '不正な操作です。5秒後に、お問い合わせページに戻ります。';
+        echo 'システムエラーです。5秒後に、お問い合わせページへ戻ります。';
         echo 
           '<script>
             setTimeout(function () {

@@ -7,7 +7,7 @@
 <meta name="description" content="ポートフォリオ（作品集）です。">
 <meta name="keywords" content="Portfolio,ポートフォリオ,Web制作,自主制作,個人制作">
 
-<title>Y.K.Portfolio</title>
+<title>Profile - Y.K.Portfolio</title>
 
 <?php include './inc/head.php'; ?>
 

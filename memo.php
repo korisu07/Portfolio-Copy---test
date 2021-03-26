@@ -4,10 +4,10 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="ポートフォリオ（作品集）です。">
+<meta name="description" content="ポートフォリオ「Memo.app ページ」の紹介ページです。">
 <meta name="keywords" content="Portfolio,ポートフォリオ,Web制作,自主制作,個人制作">
 
-<title>Y.K.Portfolio</title>
+<title>Works Memo.app - Y.K.Portfolio</title>
 
 <?php include './inc/head.php'; ?>
 
