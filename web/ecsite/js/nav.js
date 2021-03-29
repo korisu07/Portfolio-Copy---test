@@ -61,10 +61,12 @@ menu_toggles.filter((toggle) => {
       compensateScrollBar( calcScrollBar() );
       // スクロールを無効化
       disableScroll();
-      //処理が完了したらラベルの位置に戻る
+
       break;
-    //OFFの場合はメニューを隠す
+
+    //とじるか、半透明の背景をクリックした場合はメニューを隠す
     case 'nav_close':
+    case 'nav_back':
       // navを非表示
       nav_drawer.style.right = '';
 
@@ -74,23 +76,13 @@ menu_toggles.filter((toggle) => {
       compensateScrollBar();
       // スクロールを有効化
       enableScroll();
-      //処理が完了したらラベルの位置に戻る
+
       break;
     }
   }, false);
 }); //end forEach.
 
 /////
-
-nav_back.addEventListener('click', function(){
-  // navを非表示
-  nav_drawer.style.right = '';
-
-  nav_back.style.display = '';
-  nav_back.style.right = '';
-  // スクロールを有効化
-  enableScroll();
-}, false);
 
 
 // チェックがONの状態で、ウィンドウサイズに変更があった場合
@@ -145,7 +137,7 @@ function enableScroll(){
 // スクロールバーが消えたときに、その幅の分だけmargin-rightで補完する関数
 function compensateScrollBar( scrollBarWidth ){
   // 既にmargin-rightにScroll Bar分の数値がセットされている場合
-  if( container.style.marginRight ){
+  if( container.style.marginRight != '' ){
 
     // スクロールバー補完用のmargin-rightをリセット
     container.style.marginRight = '';
