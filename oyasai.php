@@ -35,8 +35,7 @@
               <img src="img/works/oyasai_preview.jpg" alt="EC siteのプレビュー">
             </div>
             <div class="preview-text">
-              <p>トータル制作時間：約40時間</p>
-              <p>改修や更新：見つかり次第、順次しています。</p>
+              <p>制作時間：随時、改良しているため不明</p>
               <p class="mb20">ターゲット層：30代～40代</p>
               
               <p>架空の野菜のECサイトを想定して制作しました。</p>
